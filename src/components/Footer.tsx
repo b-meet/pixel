@@ -60,7 +60,7 @@ export const Footer = () => {
                             <li className="flex justify-between"><span>Sunday</span> <span>By Appointment</span></li>
                         </ul>
                         <div className="flex space-x-4">
-                            <a href="#" className="text-gray-400 hover:text-brand transition-colors">Instagram</a>
+                            <a href={studioInfo.instagram} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-brand transition-colors">Instagram</a>
                             <a href="#" className="text-gray-400 hover:text-brand transition-colors">Facebook</a>
                         </div>
                     </div>

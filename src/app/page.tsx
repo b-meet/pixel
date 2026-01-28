@@ -6,7 +6,6 @@ import { TattooStyles } from "@/components/TattooStyles";
 import { Portfolio } from "@/components/Portfolio";
 import { FAQ } from "@/components/FAQ";
 import { ContactSection } from "@/components/ContactSection";
-import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -19,7 +18,6 @@ export default function Home() {
       <Portfolio />
       <FAQ />
       <ContactSection />
-      <Footer />
     </main>
   );
 }

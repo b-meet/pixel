@@ -6,24 +6,15 @@ import { Plus, Minus } from "lucide-react";
 import { SectionHeading } from "./ui/SectionHeading";
 import { cn } from "@/lib/utils";
 
+import { faqs as allFaqs } from "@/lib/data";
+
+// Flatten and pick top 4 general/important FAQs for home page
 const faqs = [
-    {
-        question: "Do you accept walk-ins?",
-        answer: "We primarily work by appointment to ensure every client gets our undivided attention and the highest quality artwork. However, you can check our availability for same-day consultations."
-    },
-    {
-        question: "How do I book a consultation?",
-        answer: "You can book a consultation through our website or contact us via WhatsApp. We require a deposit to secure your booking, which is deducted from the final price."
-    },
-    {
-        question: "Is it painful?",
-        answer: "Pain varies by person and placement, but we use modern techniques and numbing solutions (upon request) to make the experience as comfortable as possible."
-    },
-    {
-        question: "What is your pricing?",
-        answer: "Our minimum charge covers sterilization and setup. Custom pieces are quoted based on size, detail, and placement. We provide a transparent quote during your consultation."
-    }
-];
+    allFaqs[0].items[0], // Best studio
+    allFaqs[0].items[3], // Does it hurt
+    allFaqs[1].items[3], // Cost
+    allFaqs[3].items[0], // Removal services
+].map(item => ({ question: item.q, answer: item.a }));
 
 export const FAQ = () => {
     const [openIndex, setOpenIndex] = useState<number | null>(0);

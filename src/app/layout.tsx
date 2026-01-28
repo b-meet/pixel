@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat, Oswald } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
 
 const montserrat = Montserrat({
@@ -33,6 +34,7 @@ export default function RootLayout({
         <SmoothScroll>
           <Navbar />
           {children}
+          <Footer />
         </SmoothScroll>
       </body>
     </html>

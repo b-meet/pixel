@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { MoveDown, MapPin } from "lucide-react";
 import { Button } from "./ui/Button";
 import Link from "next/link";
+import { studioInfo } from "@/lib/data";
 
 export const Hero = () => {
     return (
@@ -74,7 +75,7 @@ export const Hero = () => {
                             Book Free Consultation
                         </Button>
                     </Link>
-                    <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">
+                    <a href={`https://wa.me/${(studioInfo.phone || "").replace(/[^0-9]/g, '')}`} target="_blank" rel="noopener noreferrer">
                         <Button variant="outline" size="lg">
                             WhatsApp Us
                         </Button>

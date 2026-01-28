@@ -3,6 +3,7 @@
 import { MapPin, Phone, Mail, Instagram, Facebook } from "lucide-react";
 import { SectionHeading } from "./ui/SectionHeading";
 import { Button } from "./ui/Button";
+import { studioInfo } from "@/lib/data";
 
 export const ContactSection = () => {
     return (
@@ -26,8 +27,7 @@ export const ContactSection = () => {
                                 <div>
                                     <h4 className="text-dark font-medium uppercase tracking-wider mb-1">Address</h4>
                                     <p className="text-dark/60">
-                                        City Light Town, Surat,<br />
-                                        Gujarat 395007, India
+                                        {studioInfo.fullAddress}
                                     </p>
                                 </div>
                             </div>
@@ -36,7 +36,7 @@ export const ContactSection = () => {
                                 <Phone className="text-brand shrink-0 mt-1" />
                                 <div>
                                     <h4 className="text-dark font-medium uppercase tracking-wider mb-1">Phone</h4>
-                                    <p className="text-dark/60">+91 98765 43210</p>
+                                    <p className="text-dark/60">{studioInfo.phone}</p>
                                 </div>
                             </div>
 
@@ -44,7 +44,7 @@ export const ContactSection = () => {
                                 <Mail className="text-brand shrink-0 mt-1" />
                                 <div>
                                     <h4 className="text-dark font-medium uppercase tracking-wider mb-1">Email</h4>
-                                    <p className="text-dark/60">hello@pixeltattoos.in</p>
+                                    <p className="text-dark/60">{studioInfo.email}</p>
                                 </div>
                             </div>
                         </div>
