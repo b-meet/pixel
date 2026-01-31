@@ -1,6 +1,9 @@
 import { MetadataRoute } from 'next';
 import { blogPosts, services, tattooStyles } from '@/lib/data';
 
+export const dynamic = 'force-static';
+
+
 const BASE_URL = 'https://pixeltattoos.in';
 
 export default function sitemap(): MetadataRoute.Sitemap {
