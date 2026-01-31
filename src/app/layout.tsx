@@ -21,6 +21,8 @@ export const metadata: Metadata = {
   keywords: "Best Tattoo Studio in Surat, Best Tattoo Artist Near Me, Tattoo Studio Near Me, Custom Tattoo Artists India, Pixel Tattoos Surat, Tattoo Price Surat",
 };
 
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -31,6 +33,7 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${oswald.variable} antialiased`}
       >
+        <GoogleAnalytics />
         <SmoothScroll>
           <Navbar />
           {children}
