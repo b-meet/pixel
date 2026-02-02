@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MoveDown, MapPin } from "lucide-react";
+import { MoveDown, MapPin, Phone } from "lucide-react";
+import { WhatsAppIcon } from "./icons/WhatsAppIcon";
 import { Button } from "./ui/Button";
 import Link from "next/link";
 import { studioInfo } from "@/lib/data";
@@ -68,16 +69,21 @@ export const Hero = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
-                    className="flex flex-col md:flex-row items-center justify-center gap-4"
+                    className="flex flex-col sm:flex-row items-center justify-center gap-6"
                 >
-                    <Link href="/#contact">
-                        <Button size="lg">
-                            Book Free Consultation
+                    <a href={`tel:${studioInfo.phone}`} className="w-full sm:w-auto">
+                        <Button variant="outline" size="md" className="w-full sm:w-auto gap-3 min-w-[160px] border-brand/40 hover:bg-brand/5">
+                            <Phone size={18} className="text-brand" /> Call Us
                         </Button>
-                    </Link>
-                    <a href={`https://wa.me/${(studioInfo.phone || "").replace(/[^0-9]/g, '')}`} target="_blank" rel="noopener noreferrer">
-                        <Button variant="outline" size="lg">
-                            WhatsApp Us
+                    </a>
+                    <a href={`https://wa.me/${(studioInfo.phone || "").replace(/[^0-9]/g, '')}`} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                        <Button variant="primary" size="md" className="w-full sm:w-auto gap-3 min-w-[160px] shadow-lg shadow-brand/20">
+                            <WhatsAppIcon size={18} className="text-dark" /> Whatsapp
+                        </Button>
+                    </a>
+                    <a href={studioInfo.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                        <Button variant="outline" size="md" className="w-full sm:w-auto gap-3 min-w-[160px] border-brand/40 hover:bg-brand/5">
+                            <MapPin size={18} className="text-brand" /> Location
                         </Button>
                     </a>
                 </motion.div>

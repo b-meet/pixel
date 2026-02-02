@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Star, Award, Users, Clover } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -13,8 +14,20 @@ const stats = [
 
 export const TrustSection = () => {
     return (
-        <section className="py-20 bg-dark-gray relative overflow-hidden border-y border-dark/5">
-            <div className="container mx-auto px-6">
+        <section className="py-24 relative overflow-hidden">
+            {/* Background Image */}
+            <div className="absolute inset-0 z-0 bg-neutral-950">
+                <Image
+                    src="/asset/pixel-tattoo-cover-image.jpg"
+                    alt="Tattoo Studio Background"
+                    fill
+                    className="object-cover opacity-90"
+                    priority
+                />
+                <div className="absolute inset-0 bg-dark/80 mix-blend-multiply" />
+            </div>
+
+            <div className="container mx-auto px-6 relative z-10">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
                     {stats.map((stat, index) => (
                         <motion.div
@@ -25,13 +38,13 @@ export const TrustSection = () => {
                             transition={{ delay: index * 0.1, duration: 0.5 }}
                             className="flex flex-col items-center text-center group"
                         >
-                            <div className="mb-4 p-4 rounded-full bg-white shadow-sm group-hover:bg-brand/10 transition-colors duration-300">
-                                <stat.icon size={32} className="text-dark/50 group-hover:text-brand transition-colors duration-300" />
+                            <div className="mb-4 p-4 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm group-hover:bg-brand/20 group-hover:border-brand/30 transition-all duration-300">
+                                <stat.icon size={32} className="text-brand/80 group-hover:text-brand transition-colors duration-300" />
                             </div>
-                            <h3 className="text-4xl md:text-5xl font-heading font-bold text-dark mb-2">
+                            <h3 className="text-4xl md:text-5xl font-heading font-bold text-white mb-2">
                                 {stat.value}
                             </h3>
-                            <p className="text-dark/60 uppercase tracking-widest text-xs md:text-sm font-medium">
+                            <p className="text-white/60 uppercase tracking-widest text-xs md:text-sm font-medium group-hover:text-white/80 transition-colors">
                                 {stat.label}
                             </p>
                         </motion.div>
