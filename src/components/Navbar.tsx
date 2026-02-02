@@ -8,6 +8,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/Button";
+import { WhatsAppIcon } from "./icons/WhatsAppIcon";
+import { studioInfo } from "@/lib/data";
 
 const navLinks = [
     { name: "Home", href: "/" },
@@ -112,9 +114,11 @@ export const Navbar = () => {
                                 )}
                             </div>
                         ))}
-                        <Link href="/#contact">
-                            <Button size="sm">Book Now</Button>
-                        </Link>
+                        <a href={`https://wa.me/${(studioInfo.phone || "").replace(/[^0-9]/g, '')}`} target="_blank" rel="noopener noreferrer">
+                            <Button size="sm" className="gap-2">
+                                <WhatsAppIcon size={16} className="text-dark" /> WhatsApp
+                            </Button>
+                        </a>
                     </div>
 
                     {/* Mobile Toggle */}
@@ -169,9 +173,11 @@ export const Navbar = () => {
                                     )}
                                 </div>
                             ))}
-                            <Link href="/#contact" onClick={() => setIsMobileMenuOpen(false)}>
-                                <Button className="w-full mt-4">Book Appointment</Button>
-                            </Link>
+                            <a href={`https://wa.me/${(studioInfo.phone || "").replace(/[^0-9]/g, '')}`} target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>
+                                <Button className="w-full mt-4 gap-2">
+                                    <WhatsAppIcon size={18} className="text-dark" /> WhatsApp Us
+                                </Button>
+                            </a>
                         </div>
                     </motion.div>
                 )}
