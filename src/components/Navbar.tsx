@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import NextImage from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -58,9 +59,15 @@ export const Navbar = () => {
             >
                 <div className="container mx-auto px-6 flex items-center justify-between">
                     <Link href="/" className="relative z-50 group">
-                        <h1 className="text-2xl md:text-3xl font-heading font-bold text-dark tracking-wider group-hover:text-brand transition-colors">
-                            PIXEL<span className="text-brand">.</span>
-                        </h1>
+                        <div className="relative h-12 w-48 md:h-14 md:w-56">
+                            <NextImage
+                                src="/logo.png"
+                                alt="Pixel Tattoo Logo"
+                                fill
+                                className="object-contain"
+                                priority
+                            />
+                        </div>
                     </Link>
 
                     {/* Desktop Nav */}

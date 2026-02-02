@@ -55,14 +55,19 @@ export const ContactSection = () => {
                     </div>
 
                     {/* Map Placeholder */}
+                    {/* Map */}
                     <div className="h-[400px] w-full bg-white rounded-sm overflow-hidden relative border border-dark/10 group shadow-lg">
-                        {/* Emulate Light Mode Map */}
-                        <div className="absolute inset-0 bg-neutral-100" />
-                        <div className="absolute inset-0 flex items-center justify-center">
-                            <p className="text-dark/30 font-heading tracking-widest uppercase">Google Map Loading...</p>
-                        </div>
-                        {/* Overlay for interaction */}
-                        <div className="absolute inset-0 ring-1 ring-dark/5 group-hover:ring-brand/50 transition-all pointer-events-none" />
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.669866299879!2d72.79386377610196!3d21.165529980455855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be053b2d2db77d5%3A0xe9f7981504269804!2sPrasham%20complex!5e0!3m2!1sen!2sin!4v1706691234567!5m2!1sen!2sin"
+                            width="100%"
+                            height="100%"
+                            style={{ border: 0 }}
+                            allowFullScreen
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            title="Pixel Tattoo Studio Location"
+                            className="grayscale hover:grayscale-0 transition-all duration-300"
+                        />
                     </div>
                 </div>
             </div>

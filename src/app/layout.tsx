@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   title: "Pixel Tattoos | Best Tattoo Studio in Surat & Custom Artists",
   description: "Experience the art of storytelling at Pixel Tattoos, Surat's premium tattoo studio. Expert custom artists, sterile environment, and award-winning designs. Book your consultation.",
   keywords: "Best Tattoo Studio in Surat, Best Tattoo Artist Near Me, Tattoo Studio Near Me, Custom Tattoo Artists India, Pixel Tattoos Surat, Tattoo Price Surat",
+  icons: {
+    icon: '/favicon.png',
+    apple: '/favicon.png',
+  },
 };
 
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";

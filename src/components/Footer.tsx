@@ -1,4 +1,5 @@
 import Link from "next/link";
+import NextImage from "next/image";
 import { studioInfo, services } from "@/lib/data";
 
 export const Footer = () => {
@@ -9,9 +10,14 @@ export const Footer = () => {
                     {/* Brand Column */}
                     <div>
                         <Link href="/" className="inline-block mb-6">
-                            <h2 className="text-3xl font-heading font-bold tracking-widest">
-                                PIXEL<span className="text-brand">.</span>
-                            </h2>
+                            <div className="relative h-16 w-56">
+                                <NextImage
+                                    src="/logo.png"
+                                    alt="Pixel Tattoo Logo"
+                                    fill
+                                    className="object-contain"
+                                />
+                            </div>
                         </Link>
                         <p className="text-gray-400 mb-6 leading-relaxed">
                             {studioInfo.description}
