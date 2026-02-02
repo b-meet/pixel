@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-    variant?: "primary" | "outline" | "ghost";
+    variant?: "primary" | "secondary" | "outline" | "ghost";
     size?: "sm" | "md" | "lg";
     children: React.ReactNode;
 }
@@ -41,6 +41,7 @@ export const Button = ({
 
     const variants = {
         primary: "bg-brand text-dark hover:bg-brand/90",
+        secondary: "bg-dark text-white hover:bg-dark/90",
         outline: "border border-brand/50 text-brand hover:bg-brand/10",
         ghost: "text-brand/80 hover:text-brand",
     };
@@ -55,7 +56,7 @@ export const Button = ({
         <motion.button
             ref={ref}
             className={cn(
-                "relative inline-flex items-center justify-center font-heading font-bold uppercase tracking-wider transition-colors outline-none",
+                "relative inline-flex items-center justify-center font-heading font-bold uppercase tracking-wider transition-colors outline-none cursor-pointer",
                 variants[variant],
                 sizes[size],
                 className
@@ -66,7 +67,7 @@ export const Button = ({
             onMouseLeave={handleMouseLeave}
             {...(props as any)}
         >
-            <span className="relative z-10">{children}</span>
+            <span className="relative z-10 flex items-center justify-center gap-2">{children}</span>
         </motion.button>
     );
 };
