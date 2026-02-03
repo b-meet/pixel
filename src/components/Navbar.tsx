@@ -61,12 +61,12 @@ export const Navbar = () => {
             >
                 <div className="container mx-auto px-6 flex items-center justify-between">
                     <Link href="/" className="relative z-50 group">
-                        <div className="relative h-12 w-48 md:h-14 md:w-56">
+                        <div className="relative h-10 w-36 md:h-14 md:w-56 transition-all duration-300">
                             <NextImage
                                 src="/logo.png"
                                 alt="Pixel Tattoo Logo"
                                 fill
-                                className="object-contain"
+                                className="object-contain object-left"
                                 priority
                             />
                         </div>

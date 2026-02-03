@@ -69,7 +69,7 @@ export const Hero = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
-                    className="flex flex-col sm:flex-row items-center justify-center gap-6"
+                    className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6"
                 >
                     <a href={`tel:${studioInfo.phone}`} className="w-full sm:w-auto">
                         <Button variant="outline" size="md" className="w-full sm:w-auto gap-3 min-w-[160px] border-brand/40 hover:bg-brand/5">
