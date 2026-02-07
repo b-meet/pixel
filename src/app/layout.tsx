@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat, Oswald } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -38,6 +39,11 @@ export default function RootLayout({
         className={`${montserrat.variable} ${oswald.variable} antialiased`}
       >
         <GoogleAnalytics />
+        <Script
+          src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+          async
+          defer
+        />
         <SmoothScroll>
           <Navbar />
           {children}
