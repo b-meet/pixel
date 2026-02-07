@@ -9,7 +9,7 @@ const stats = [
     { label: "Years Experience", value: "10+", icon: Award },
     { label: "Happy Clients", value: "5k+", icon: Users },
     { label: "Google Rating", value: "4.9", icon: Star },
-    { label: "Custom Designs", value: "100%", icon: Clover },
+    { label: "Hygenic", value: "100%", icon: Clover },
 ];
 
 export const TrustSection = () => {
