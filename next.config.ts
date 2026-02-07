@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export",
+  // output: "export", // Disabled to allow Server Actions for Turnstile verification
   images: {
     unoptimized: true,
   },
