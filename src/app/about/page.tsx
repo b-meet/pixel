@@ -73,7 +73,7 @@ export default function AboutPage() {
 
                     <div className="order-1 md:order-2">
                         <SectionHeading title="The Artist" subtitle="Meet the Master" center={false} />
-                        <h3 className="text-2xl font-bold text-dark mb-4">Ravi Patel (Founder & Lead Artist)</h3>
+                        <h3 className="text-2xl font-bold text-dark mb-4">Dheyur Bhalodiya (Founder & Lead Artist)</h3>
                         <p className="text-dark/70 mb-6 leading-relaxed">
                             With a background in Fine Arts and over 8 years in the tattoo industry, Ravi brings a unique perspective to tattooing. His specialty lies in hyper-realism and intricate fine-line work.
                         </p>
@@ -94,7 +94,7 @@ export default function AboutPage() {
                         </div>
 
                         <Link href="/#contact">
-                            <Button>Book with Ravi</Button>
+                            <Button>Book Now</Button>
                         </Link>
                     </div>
                 </div>
