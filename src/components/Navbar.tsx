@@ -12,9 +12,10 @@ import { WhatsAppIcon } from "./icons/WhatsAppIcon";
 import { studioInfo } from "@/lib/data";
 
 const navLinks = [
-    { name: "Home", href: "/" },
+    { name: "The Studio", href: "/" },
+    { name: "The Ink Gallery", href: "/gallery" },
     {
-        name: "Services",
+        name: "Tattoo Styles",
         href: "#",
         dropdown: [
             { name: "Custom Tattoo", href: "/services/custom-tattoo" },
@@ -25,9 +26,8 @@ const navLinks = [
             { name: "Removal", href: "/services/tattoo-removal" },
         ]
     },
-    { name: "Gallery", href: "/gallery" },
-    { name: "About", href: "/about" },
-    { name: "Blog", href: "/blog" },
+    { name: "Inside Pixel", href: "/about" },
+    { name: "The Ink Stories", href: "/blog" },
     { name: "FAQ", href: "/faq" },
 ];
 
