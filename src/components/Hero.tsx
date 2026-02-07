@@ -47,9 +47,9 @@ export const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.4 }}
                     className="font-heading font-bold text-5xl md:text-7xl lg:text-8xl xl:text-9xl text-dark uppercase tracking-wider mb-8 leading-tight"
                 >
-                    Precision <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-dark via-dark/80 to-dark/50">
-                        Hygiene & Heart
+                    Every Tattoo <br />
+                    <span className="text-transparent bg-clip-text bg-linear-to-r from-dark via-dark/80 to-dark/50">
+                        Tells A Story
                     </span>
                 </motion.h1>
 
@@ -61,7 +61,7 @@ export const Hero = () => {
                 >
                     Custom Tattoos • Minimalist • Fine Line • Cover-ups • Removal
                     <br />
-                    Crafting stories on skin with hospital-grade safety standards.
+                    Crafting stories on skin with medical-grade safety standards.
                 </motion.p>
 
                 {/* CTA Buttons */}

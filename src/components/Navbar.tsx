@@ -5,36 +5,23 @@ import Link from "next/link";
 import NextImage from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/Button";
 import { WhatsAppIcon } from "./icons/WhatsAppIcon";
 import { studioInfo } from "@/lib/data";
 
 const navLinks = [
-    { name: "Home", href: "/" },
-    {
-        name: "Services",
-        href: "#",
-        dropdown: [
-            { name: "Custom Tattoo", href: "/services/custom-tattoo" },
-            { name: "Minimalist", href: "/services/minimalist-tattoos" },
-            { name: "Fine Line", href: "/services/fine-line-tattoos" },
-            { name: "Black & Grey", href: "/services/black-and-grey-tattoos" },
-            { name: "Cover Ups", href: "/services/cover-up-tattoos" },
-            { name: "Removal", href: "/services/tattoo-removal" },
-        ]
-    },
-    { name: "Gallery", href: "/gallery" },
-    { name: "About", href: "/about" },
-    { name: "Blog", href: "/blog" },
+    { name: "The Studio", href: "/" },
+    { name: "The Ink Gallery", href: "/tattoo-categories" },
+    { name: "Inside Pixel", href: "/about" },
+    { name: "The Ink Stories", href: "/blog" },
     { name: "FAQ", href: "/faq" },
 ];
 
 export const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [openDropdown, setOpenDropdown] = useState<string | null>(null);
     const pathname = usePathname();
 
     useEffect(() => {
@@ -75,43 +62,13 @@ export const Navbar = () => {
                     {/* Desktop Nav */}
                     <div className="hidden md:flex items-center space-x-8">
                         {navLinks.map((link) => (
-                            <div
-                                key={link.name}
-                                className="relative group"
-                                onMouseEnter={() => link.dropdown && setOpenDropdown(link.name)}
-                                onMouseLeave={() => link.dropdown && setOpenDropdown(null)}
-                            >
+                            <div key={link.name} className="relative group">
                                 <Link
                                     href={link.href}
                                     className="flex items-center gap-1 text-sm font-medium uppercase tracking-widest text-dark/80 hover:text-brand transition-colors relative py-2"
                                 >
                                     {link.name}
-                                    {link.dropdown && <ChevronDown size={14} />}
                                 </Link>
-
-                                {link.dropdown && (
-                                    <AnimatePresence>
-                                        {openDropdown === link.name && (
-                                            <motion.div
-                                                initial={{ opacity: 0, y: 10 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                exit={{ opacity: 0, y: 10 }}
-                                                transition={{ duration: 0.2 }}
-                                                className="absolute top-full left-0 w-48 bg-white border border-dark/5 shadow-lg rounded-sm py-2"
-                                            >
-                                                {link.dropdown.map((subItem) => (
-                                                    <Link
-                                                        key={subItem.name}
-                                                        href={subItem.href}
-                                                        className="block px-4 py-2 text-sm text-dark/70 hover:text-brand hover:bg-neutral-50 transition-colors"
-                                                    >
-                                                        {subItem.name}
-                                                    </Link>
-                                                ))}
-                                            </motion.div>
-                                        )}
-                                    </AnimatePresence>
-                                )}
                             </div>
                         ))}
                         <a href={`https://wa.me/${(studioInfo.phone || "").replace(/[^0-9]/g, '')}`} target="_blank" rel="noopener noreferrer">
@@ -144,33 +101,13 @@ export const Navbar = () => {
                         <div className="flex flex-col space-y-6">
                             {navLinks.map((link, index) => (
                                 <div key={link.name}>
-                                    {link.dropdown ? (
-                                        <div className="space-y-4">
-                                            <div className="text-2xl font-heading font-bold uppercase text-dark tracking-widest">
-                                                {link.name}
-                                            </div>
-                                            <div className="pl-4 flex flex-col space-y-3 border-l-2 border-brand/20">
-                                                {link.dropdown.map((subItem) => (
-                                                    <Link
-                                                        key={subItem.name}
-                                                        href={subItem.href}
-                                                        onClick={() => setIsMobileMenuOpen(false)}
-                                                        className="text-lg text-dark/70 hover:text-brand"
-                                                    >
-                                                        {subItem.name}
-                                                    </Link>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    ) : (
-                                        <Link
-                                            href={link.href}
-                                            onClick={() => setIsMobileMenuOpen(false)}
-                                            className="block text-2xl font-heading font-bold uppercase text-dark hover:text-brand tracking-widest"
-                                        >
-                                            {link.name}
-                                        </Link>
-                                    )}
+                                    <Link
+                                        href={link.href}
+                                        onClick={() => setIsMobileMenuOpen(false)}
+                                        className="block text-2xl font-heading font-bold uppercase text-dark hover:text-brand tracking-widest"
+                                    >
+                                        {link.name}
+                                    </Link>
                                 </div>
                             ))}
                             <a href={`https://wa.me/${(studioInfo.phone || "").replace(/[^0-9]/g, '')}`} target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>

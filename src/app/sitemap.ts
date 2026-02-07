@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const routes = [
         '',
         '/about',
-        '/gallery',
+        '/tattoo-categories',
         '/faq',
         '/contact', // Assuming there is a contact section/page
         '/blog',
@@ -22,14 +22,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }));
 
     const serviceRoutes = services.map((service) => ({
-        url: `${BASE_URL}/services/${service.slug}`,
+        url: `${BASE_URL}/tattoo-categories/${service.slug}`,
         lastModified: new Date(),
         changeFrequency: 'weekly' as const,
         priority: 0.9,
     }));
 
     const styleRoutes = tattooStyles.map((style) => ({
-        url: `${BASE_URL}/styles/${style.slug}`,
+        url: `${BASE_URL}/tattoo-categories/${style.slug}`,
         lastModified: new Date(),
         changeFrequency: 'weekly' as const,
         priority: 0.8,
