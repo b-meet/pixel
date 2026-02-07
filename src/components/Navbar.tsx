@@ -13,7 +13,7 @@ import { studioInfo } from "@/lib/data";
 
 const navLinks = [
     { name: "The Studio", href: "/" },
-    { name: "The Ink Gallery", href: "/gallery" },
+    { name: "The Ink Gallery", href: "/tattoo-categories" },
     { name: "Inside Pixel", href: "/about" },
     { name: "The Ink Stories", href: "/blog" },
     { name: "FAQ", href: "/faq" },

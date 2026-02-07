@@ -36,7 +36,7 @@ export const Footer = () => {
                             {services.map((service) => (
                                 <li key={service.id}>
                                     <Link
-                                        href={`/services/${service.slug}`}
+                                        href={`/tattoo-categories/${service.slug}`}
                                         className="text-gray-400 hover:text-brand transition-colors text-sm"
                                     >
                                         {service.title}
@@ -50,7 +50,7 @@ export const Footer = () => {
                     <div>
                         <h3 className="text-lg font-bold mb-6 tracking-widest">EXPLORE</h3>
                         <ul className="space-y-3">
-                            <li><Link href="/gallery" className="text-gray-400 hover:text-brand transition-colors text-sm">Tattoo Gallery</Link></li>
+                            <li><Link href="/tattoo-categories" className="text-gray-400 hover:text-brand transition-colors text-sm">Tattoo Categories</Link></li>
                             <li><Link href="/about" className="text-gray-400 hover:text-brand transition-colors text-sm">Our Story</Link></li>
                             <li><Link href="/blog" className="text-gray-400 hover:text-brand transition-colors text-sm">Blog & Tips</Link></li>
                             <li><Link href="/faq" className="text-gray-400 hover:text-brand transition-colors text-sm">FAQ</Link></li>
