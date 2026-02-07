@@ -1,25 +1,25 @@
 import Link from "next/link";
 import NextImage from "next/image";
-import { studioInfo, services } from "@/lib/data";
+import { studioInfo, allCategories } from "@/lib/data";
 
 export const Footer = () => {
     return (
         <footer className="bg-neutral-900 pt-20 pb-10 text-white border-t border-white/5">
             <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-                    {/* Brand Column */}
-                    <div>
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
+                    {/* Brand Column (Left - 3 Cols) */}
+                    <div className="lg:col-span-3">
                         <Link href="/" className="inline-block mb-6">
                             <div className="relative h-16 w-56">
                                 <NextImage
                                     src="/logo.png"
                                     alt="Pixel Tattoo Logo"
                                     fill
-                                    className="object-contain"
+                                    className="object-contain object-left"
                                 />
                             </div>
                         </Link>
-                        <p className="text-gray-400 mb-6 leading-relaxed">
+                        <p className="text-gray-400 mb-6 leading-relaxed text-sm pr-4">
                             {studioInfo.description}
                         </p>
                         <div className="space-y-2 text-sm text-gray-400">
@@ -29,45 +29,52 @@ export const Footer = () => {
                         </div>
                     </div>
 
-                    {/* Services Column */}
-                    <div>
-                        <h3 className="text-lg font-bold mb-6 tracking-widest">SERVICES</h3>
-                        <ul className="space-y-3">
-                            {services.map((service) => (
-                                <li key={service.id}>
+                    {/* Services Column (Middle - 5 Cols) */}
+                    <div className="lg:col-span-5">
+                        <h3 className="text-lg font-bold mb-6 tracking-widest text-brand">SERVICES</h3>
+                        <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
+                            {allCategories.map((cat) => (
+                                <li key={cat.name}>
                                     <Link
-                                        href={`/tattoo-categories/${service.slug}`}
-                                        className="text-gray-400 hover:text-brand transition-colors text-sm"
+                                        href={cat.href}
+                                        className="text-gray-400 hover:text-white transition-colors text-sm"
                                     >
-                                        {service.title}
+                                        {cat.name}
                                     </Link>
                                 </li>
                             ))}
                         </ul>
                     </div>
 
-                    {/* Quick Links Column */}
-                    <div>
-                        <h3 className="text-lg font-bold mb-6 tracking-widest">EXPLORE</h3>
+                    {/* Explore Column (Right - 2 Cols) */}
+                    <div className="lg:col-span-2">
+                        <h3 className="text-lg font-bold mb-6 tracking-widest text-brand">EXPLORE</h3>
                         <ul className="space-y-3">
-                            <li><Link href="/tattoo-categories" className="text-gray-400 hover:text-brand transition-colors text-sm">Tattoo Categories</Link></li>
-                            <li><Link href="/about" className="text-gray-400 hover:text-brand transition-colors text-sm">Our Story</Link></li>
-                            <li><Link href="/blog" className="text-gray-400 hover:text-brand transition-colors text-sm">Blog & Tips</Link></li>
-                            <li><Link href="/faq" className="text-gray-400 hover:text-brand transition-colors text-sm">FAQ</Link></li>
-                            <li><Link href="/#contact" className="text-gray-400 hover:text-brand transition-colors text-sm">Book Consultation</Link></li>
+                            <li><Link href="/" className="text-gray-400 hover:text-white transition-colors text-sm">The Studio</Link></li>
+                            <li><Link href="/tattoo-categories" className="text-gray-400 hover:text-white transition-colors text-sm">The Ink Gallery</Link></li>
+                            <li><Link href="/about" className="text-gray-400 hover:text-white transition-colors text-sm">Inside Pixel</Link></li>
+                            <li><Link href="/blog" className="text-gray-400 hover:text-white transition-colors text-sm">The Ink Stories</Link></li>
+                            <li><Link href="/faq" className="text-gray-400 hover:text-white transition-colors text-sm">FAQ</Link></li>
                         </ul>
                     </div>
 
-                    {/* Hours / Socials (Placeholder for now) */}
-                    <div>
-                        <h3 className="text-lg font-bold mb-6 tracking-widest">STUDIO HOURS</h3>
-                        <ul className="space-y-2 text-gray-400 text-sm mb-8">
-                            <li className="flex justify-between"><span>Mon - Sat</span> <span>11:00 - 20:00</span></li>
-                            <li className="flex justify-between"><span>Sunday</span> <span>By Appointment</span></li>
-                        </ul>
-                        <div className="flex space-x-4">
-                            <a href={studioInfo.instagram} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-brand transition-colors">Instagram</a>
-                            <a href="#" className="text-gray-400 hover:text-brand transition-colors">Facebook</a>
+                    {/* Hours & Socials (Far Right - 2 Cols) */}
+                    <div className="lg:col-span-2">
+                        <div className="flex flex-col gap-8">
+                            <div>
+                                <h3 className="text-lg font-bold mb-6 tracking-widest text-brand">HOURS</h3>
+                                <ul className="space-y-2 text-gray-400 text-sm">
+                                    <li className="flex justify-between"><span>Mon-Sat</span> <span>11-8</span></li>
+                                    <li className="flex justify-between"><span>Sun</span> <span>Book</span></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 className="text-lg font-bold mb-6 tracking-widest text-brand">FOLLOW</h3>
+                                <div className="flex flex-col space-y-2">
+                                    <a href={studioInfo.instagram} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-sm font-medium uppercase tracking-wider">Instagram</a>
+                                    <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm font-medium uppercase tracking-wider">Facebook</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

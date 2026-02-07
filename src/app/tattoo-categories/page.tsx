@@ -8,26 +8,8 @@ export const metadata: Metadata = {
 
 import { GalleryCard } from "@/components/GalleryCard";
 import { ArrowRight, Phone, MapPin } from "lucide-react";
-import { studioInfo } from "@/lib/data";
+import { studioInfo, allCategories as categories } from "@/lib/data";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
-
-const categories = [
-    { name: "Custom Tattoo", href: "/tattoo-categories/custom-tattoo", color: "bg-red-900" },
-    { name: "Minimalist", href: "/tattoo-categories/minimalist-tattoos", color: "bg-blue-900" },
-    { name: "Fine Line", href: "/tattoo-categories/fine-line-tattoos", color: "bg-green-900" },
-    { name: "Black & Grey", href: "/tattoo-categories/black-and-grey-tattoos", color: "bg-gray-900" },
-    { name: "Cover Ups", href: "/tattoo-categories/cover-up-tattoos", color: "bg-purple-900" },
-    { name: "Removal", href: "/tattoo-categories/tattoo-removal", color: "bg-red-950" },
-    { name: "Small Tattoos", href: "/tattoo-categories/small-tattoos", color: "bg-pink-900" },
-    { name: "Religious", href: "/tattoo-categories/religious-tattoos", color: "bg-yellow-900" },
-    { name: "Geometric", href: "/tattoo-categories/geometric-tattoos", color: "bg-indigo-900" },
-    { name: "Travel", href: "/tattoo-categories/travel-tattoos", color: "bg-cyan-900" },
-    { name: "Animal", href: "/tattoo-categories/animal-tattoos", color: "bg-orange-900" },
-    { name: "Calligraphy", href: "/tattoo-categories/calligraphy-tattoos", color: "bg-emerald-900" },
-    { name: "Couple", href: "/tattoo-categories/couple-tattoos", color: "bg-rose-900" },
-    { name: "Dot Work", href: "/tattoo-categories/dot-work-tattoos", color: "bg-teal-900" },
-    { name: "Color", href: "/tattoo-categories/color-tattoos", color: "bg-fuchsia-900" },
-];
 
 export default function GalleryPage() {
     return (
