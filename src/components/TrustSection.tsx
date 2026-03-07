@@ -18,7 +18,7 @@ export const TrustSection = () => {
             {/* Background Image */}
             <div className="absolute inset-0 z-0 bg-neutral-950">
                 <Image
-                    src="/asset/pixel-tattoo-cover-image.jpg"
+                    src="/asset/pixel-tattoo-cover-image.webp"
                     alt="Tattoo Studio Background"
                     fill
                     className="object-cover opacity-90"

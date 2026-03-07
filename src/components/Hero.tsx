@@ -14,7 +14,7 @@ export const Hero = () => {
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--color-brand-glow)_0%,_transparent_60%)] opacity-30 scale-150 animate-pulse" />
 
             {/* Light overlay for text readability */}
-            <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/50 to-white" />
+            <div className="absolute inset-0 bg-linear-to-b from-white/80 via-white/50 to-white" />
 
             <div className="container relative z-10 px-6 text-center">
                 {/* Location Badge */}

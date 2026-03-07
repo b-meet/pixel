@@ -14,7 +14,7 @@ export const ServicesSection = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {services.map((service, index) => (
-                        <Link key={service.id} href={`/services/${service.slug}`} className="group">
+                        <Link key={service.id} href={`/tattoo-categories/${service.slug}`} className="group">
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}

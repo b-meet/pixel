@@ -72,7 +72,6 @@ export const Footer = () => {
                                 <h3 className="text-lg font-bold mb-6 tracking-widest text-brand">FOLLOW</h3>
                                 <div className="flex flex-col space-y-2">
                                     <a href={studioInfo.instagram} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-sm font-medium uppercase tracking-wider">Instagram</a>
-                                    <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm font-medium uppercase tracking-wider">Facebook</a>
                                 </div>
                             </div>
                         </div>
@@ -84,8 +83,8 @@ export const Footer = () => {
                         © {new Date().getFullYear()} {studioInfo.name}. All rights reserved.
                     </p>
                     <div className="flex gap-6 text-sm text-gray-600">
-                        <Link href="#" className="hover:text-brand">Privacy Policy</Link>
-                        <Link href="#" className="hover:text-brand">Terms of Service</Link>
+                        <Link href="/" className="hover:text-brand">Privacy Policy</Link>
+                        <Link href="/" className="hover:text-brand">Terms of Service</Link>
                     </div>
                 </div>
             </div>

@@ -13,7 +13,7 @@ export const TattooStyles = () => {
 
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
                     {tattooStyles.map((style, index) => (
-                        <Link key={style.id} href={`/styles/${style.slug}`} passHref>
+                        <Link key={style.id} href={`/tattoo-categories/${style.slug}`} passHref>
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 whileInView={{ opacity: 1, scale: 1 }}

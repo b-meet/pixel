@@ -40,10 +40,10 @@ export const Navbar = () => {
                 animate={{ y: 0 }}
                 transition={{ duration: 0.5 }}
                 className={cn(
-                    "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent",
+                    "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b",
                     isScrolled
                         ? "bg-white/95 backdrop-blur-md py-4 border-dark/5 shadow-sm"
-                        : "bg-transparent py-6"
+                        : "bg-transparent py-6 border-transparent"
                 )}
             >
                 <div className="container mx-auto px-6 flex items-center justify-between">
@@ -61,16 +61,29 @@ export const Navbar = () => {
 
                     {/* Desktop Nav */}
                     <div className="hidden md:flex items-center space-x-8">
-                        {navLinks.map((link) => (
-                            <div key={link.name} className="relative group">
-                                <Link
-                                    href={link.href}
-                                    className="flex items-center gap-1 text-sm font-medium uppercase tracking-widest text-dark/80 hover:text-brand transition-colors relative py-2"
-                                >
-                                    {link.name}
-                                </Link>
-                            </div>
-                        ))}
+                        {navLinks.map((link) => {
+                            const isActive = pathname === link.href;
+                            return (
+                                <div key={link.name} className="relative group">
+                                    <Link
+                                        href={link.href}
+                                        className={cn(
+                                            "flex items-center gap-1 text-sm font-bold uppercase tracking-widest transition-colors relative py-2",
+                                            isActive ? "text-brand" : "text-dark/80 hover:text-brand"
+                                        )}
+                                    >
+                                        {link.name}
+                                        {isActive && (
+                                            <motion.div
+                                                layoutId="activeNavIndicator"
+                                                className="absolute bottom-0 left-0 right-0 h-0.5 bg-brand rounded-full"
+                                                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                                            />
+                                        )}
+                                    </Link>
+                                </div>
+                            );
+                        })}
                         <a href={`https://wa.me/${(studioInfo.phone || "").replace(/[^0-9]/g, '')}`} target="_blank" rel="noopener noreferrer">
                             <Button size="sm" className="gap-2">
                                 <WhatsAppIcon size={16} className="text-dark" /> WhatsApp
@@ -99,17 +112,23 @@ export const Navbar = () => {
                         className="fixed inset-0 z-40 bg-white flex flex-col pt-24 px-6 md:hidden overflow-y-auto"
                     >
                         <div className="flex flex-col space-y-6">
-                            {navLinks.map((link, index) => (
-                                <div key={link.name}>
-                                    <Link
-                                        href={link.href}
-                                        onClick={() => setIsMobileMenuOpen(false)}
-                                        className="block text-2xl font-heading font-bold uppercase text-dark hover:text-brand tracking-widest"
-                                    >
-                                        {link.name}
-                                    </Link>
-                                </div>
-                            ))}
+                            {navLinks.map((link, index) => {
+                                const isActive = pathname === link.href;
+                                return (
+                                    <div key={link.name}>
+                                        <Link
+                                            href={link.href}
+                                            onClick={() => setIsMobileMenuOpen(false)}
+                                            className={cn(
+                                                "block text-2xl font-heading font-bold uppercase tracking-widest",
+                                                isActive ? "text-brand" : "text-dark hover:text-brand"
+                                            )}
+                                        >
+                                            {link.name}
+                                        </Link>
+                                    </div>
+                                );
+                            })}
                             <a href={`https://wa.me/${(studioInfo.phone || "").replace(/[^0-9]/g, '')}`} target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>
                                 <Button className="w-full mt-4 gap-2">
                                     <WhatsAppIcon size={18} className="text-dark" /> WhatsApp Us
