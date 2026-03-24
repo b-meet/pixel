@@ -1,6 +1,6 @@
 "use client";
 
-import { Star, Phone, Navigation, Globe, MapPin, Clock, CreditCard, BadgeCheck, MessageSquare, ChevronRight, Calendar } from "lucide-react";
+import { Star, Phone, Navigation, Globe, MapPin, Clock, CreditCard, BadgeCheck, MessageSquare, ChevronRight, Calendar, Info, ArrowRight, ChevronUp } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -90,14 +90,45 @@ export default function LandingPage() {
               </div>
             </div>
 
-            {/* Payments */}
-            <div className="bg-neutral-50 p-6 rounded-2xl border border-dark/5">
-              <h3 className="font-heading font-bold text-sm text-dark/50 uppercase tracking-widest mb-3 flex items-center gap-2">
-                <CreditCard className="w-4 h-4" /> Accepted Payments
+            {/* Insights */}
+            <div className="bg-white p-6 rounded-2xl border border-dark/5 shadow-sm space-y-6">
+              <h3 className="font-heading font-bold text-xl mb-4 flex items-center gap-2">
+                <Info className="w-5 h-5 text-brand" /> Insights
               </h3>
-              <p className="text-dark/70 text-sm leading-relaxed">
-                Credit cards, Debit cards, Google Pay, NFC mobile payments, American Express, MasterCard, and VISA.
-              </p>
+              
+              <div className="space-y-4">
+                  <div>
+                    <h4 className="font-heading font-bold text-xs uppercase tracking-widest mb-1 text-dark/50">Accessibility</h4>
+                    <p className="text-dark/80 text-sm leading-relaxed">Wheelchair accessible entrance · Wheelchair accessible parking lot</p>
+                  </div>
+                  <div>
+                    <h4 className="font-heading font-bold text-xs uppercase tracking-widest mb-1 text-dark/50">Amenities</h4>
+                    <p className="text-dark/80 text-sm leading-relaxed">Gender-neutral restroom · Wi-Fi · Free Wi-Fi</p>
+                  </div>
+                  <div>
+                    <h4 className="font-heading font-bold text-xs uppercase tracking-widest mb-1 text-dark/50">Crowd</h4>
+                    <p className="text-dark/80 text-sm leading-relaxed">LGBTQ+ friendly</p>
+                  </div>
+                  <div>
+                    <h4 className="font-heading font-bold text-xs uppercase tracking-widest mb-1 text-dark/50">Payments</h4>
+                    <p className="text-dark/80 text-sm leading-relaxed">Credit cards · Debit cards · Google Pay · NFC mobile payments · American Express · MasterCard · VISA</p>
+                  </div>
+              </div>
+            </div>
+
+            {/* Services */}
+            <div className="bg-white p-6 rounded-2xl border border-dark/5 shadow-sm space-y-4">
+              <div className="flex justify-between items-center mb-2">
+                <h3 className="font-heading font-bold text-xl">Services</h3>
+                <ChevronUp className="w-5 h-5 text-dark/50" />
+              </div>
+              <div className="space-y-4 text-dark/80 text-sm">
+                <div className="pb-4 border-b border-dark/5">3D-style tattoos</div>
+                <div className="pb-4">Abstract tattoos</div>
+              </div>
+              <button className="pt-2 text-brand font-medium text-sm flex items-center gap-2 hover:underline">
+                <ArrowRight className="w-4 h-4" /> More services
+              </button>
             </div>
           </motion.div>
 
@@ -123,6 +154,42 @@ export default function LandingPage() {
                     <span className="text-sm font-medium">{service}</span>
                   </div>
                 ))}
+              </div>
+            </div>
+
+            {/* Posts */}
+            <div>
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="font-heading font-bold text-2xl text-dark">Posts</h2>
+                <button className="text-sm font-medium text-brand hover:underline flex items-center gap-1">
+                  View All <ChevronRight className="w-4 h-4" />
+                </button>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Post 1 */}
+                <div className="bg-white rounded-2xl border border-dark/5 overflow-hidden shadow-sm hover:shadow-md transition-shadow group cursor-pointer">
+                    <div className="h-48 bg-neutral-200 relative flex items-center justify-center text-dark/30 font-bold tracking-widest uppercase overflow-hidden">
+                        Image: Tattoo Process
+                        <div className="absolute inset-0 bg-dark/5 group-hover:bg-dark/0 transition-colors" />
+                    </div>
+                    <div className="p-5">
+                       <p className="text-sm text-dark/70 leading-relaxed font-medium line-clamp-2">
+                         Your safety is our top priority. Our studio follows strict hygiene
+                       </p>
+                    </div>
+                </div>
+                {/* Post 2 */}
+                <div className="bg-white rounded-2xl border border-dark/5 overflow-hidden shadow-sm hover:shadow-md transition-shadow group cursor-pointer">
+                    <div className="h-48 bg-neutral-200 relative flex items-center justify-center text-dark/30 font-bold tracking-widest uppercase overflow-hidden">
+                        Image: Ink Caps
+                        <div className="absolute inset-0 bg-dark/5 group-hover:bg-dark/0 transition-colors" />
+                    </div>
+                    <div className="p-5">
+                       <p className="text-sm text-dark/70 leading-relaxed font-medium line-clamp-2">
+                         Looking for a unique tattoo designed specially for you? At custom... in your...
+                       </p>
+                    </div>
+                </div>
               </div>
             </div>
 
