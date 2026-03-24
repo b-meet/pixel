@@ -13,9 +13,9 @@ import { studioInfo } from "@/lib/data";
 
 const navLinks = [
     { name: "The Studio", href: "/" },
-    { name: "The Ink Gallery", href: "/tattoo-categories" },
+    { name: "Categories", href: "/tattoo-categories" },
     { name: "Inside Pixel", href: "/about" },
-    { name: "The Ink Stories", href: "/blog" },
+    { name: "Blog", href: "/blog" },
     { name: "FAQ", href: "/faq" },
 ];
 
@@ -41,9 +41,9 @@ export const Navbar = () => {
                 transition={{ duration: 0.5 }}
                 className={cn(
                     "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b",
-                    isScrolled
-                        ? "bg-white/95 backdrop-blur-md py-4 border-dark/5 shadow-sm"
-                        : "bg-transparent py-6 border-transparent"
+                    pathname === "/" || isScrolled
+                        ? "bg-white/95 backdrop-blur-md py-3 border-dark/5 shadow-sm text-dark"
+                        : "bg-transparent py-4 border-transparent text-white"
                 )}
             >
                 <div className="container mx-auto px-6 flex items-center justify-between">

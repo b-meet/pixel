@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 import { CheckCircle2, Heart, ShieldCheck, User } from "lucide-react";
 import { Metadata } from "next";
+import { TrustSection } from "@/components/TrustSection";
+import { ArtistSection } from "@/components/ArtistSection";
 
 export const metadata: Metadata = {
     title: "About Pixel Tattoo | Best Tattoo Studio in Surat",
@@ -62,43 +64,11 @@ export default function AboutPage() {
                 </div>
             </section>
 
+            {/* Stats / Trust Section */}
+            <TrustSection />
+
             {/* Meet the Artist */}
-            <section className="py-20 container mx-auto px-6">
-                <div className="grid md:grid-cols-2 gap-12 items-center">
-                    <div className="relative h-[600px] bg-dark-gray rounded-sm overflow-hidden order-2 md:order-1">
-                        <div className="absolute inset-0 bg-neutral-200 flex items-center justify-center">
-                            <span className="text-dark/20 uppercase tracking-widest">Artist Photo</span>
-                        </div>
-                    </div>
-
-                    <div className="order-1 md:order-2">
-                        <SectionHeading title="The Artist" subtitle="Meet the Master" center={false} />
-                        <h3 className="text-2xl font-bold text-dark mb-4">Dheyur Bhalodiya (Founder & Lead Artist)</h3>
-                        <p className="text-dark/70 mb-6 leading-relaxed">
-                            With a background in Fine Arts and over 8 years in the tattoo industry, Ravi brings a unique perspective to tattooing. His specialty lies in hyper-realism and intricate fine-line work.
-                        </p>
-                        <p className="text-dark/70 mb-8 leading-relaxed">
-                            "I believe a tattoo is a collaboration. It's an honor to be trusted with someone's skin and story. My goal is to give you a piece of art that you'll be proud to wear forever."
-                        </p>
-
-                        <div className="space-y-3 mb-8">
-                            <div className="flex items-center gap-3 text-dark/80">
-                                <CheckCircle2 size={18} className="text-brand" /> <span>Certified Safety & Hygiene Pro</span>
-                            </div>
-                            <div className="flex items-center gap-3 text-dark/80">
-                                <CheckCircle2 size={18} className="text-brand" /> <span>Award Winning Artist (2023)</span>
-                            </div>
-                            <div className="flex items-center gap-3 text-dark/80">
-                                <CheckCircle2 size={18} className="text-brand" /> <span>Specialist in Cover-ups</span>
-                            </div>
-                        </div>
-
-                        <Link href="/#contact">
-                            <Button>Book Now</Button>
-                        </Link>
-                    </div>
-                </div>
-            </section>
+            <ArtistSection />
         </main>
     );
 }
