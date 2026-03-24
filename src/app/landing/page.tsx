@@ -1,13 +1,67 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { Star, Phone, Navigation, Globe, MapPin, Clock, CreditCard, BadgeCheck, MessageSquare, ChevronRight, Calendar, Info, ArrowRight, ChevronUp, Share2, Bookmark, Instagram } from "lucide-react";
 import Link from "next/link";
+import NextImage from "next/image";
 import { motion } from "framer-motion";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { studioInfo } from "@/lib/data";
 
+const galleryImages = [
+  "/asset/Band-tattoo-surat.webp",
+  "/asset/Color-tattoo-design.webp",
+  "/asset/Color-tattoo-pixel-tattoo.webp",
+  "/asset/Custom-daughter-pixel-tattoo.webp",
+  "/asset/Custom-fineline-pixel-tattoo.webp",
+  "/asset/Geometric-pixel-tattoo-surat.webp",
+  "/asset/Geometric-tattoo-surat.webp",
+  "/asset/Lord-krishna-pixel-tattoo.webp",
+  "/asset/Mandala-tattoo-design.webp",
+  "/asset/Mountains-tattoo-surat.webp",
+  "/asset/Panda tattoo.webp",
+  "/asset/Peacock-feather-tattoo.webp",
+];
+
+const postImages = [
+  "/asset/pixel-tattoo-cover-image.webp",
+  "/asset/tattoo-machine.webp",
+];
+
 export default function LandingPage() {
   const whatsappUrl = `https://wa.me/${(studioInfo.phone || "").replace(/[^0-9]/g, '')}`;
+
+  const [businessStatus, setBusinessStatus] = useState({
+    isOpen: false,
+    text: "Open ⋅ Closes 10 PM",
+    color: "text-[#188038]",
+  });
+
+  useEffect(() => {
+    const updateStatus = () => {
+      const now = new Date();
+      const hour = now.getHours();
+      const isOpen = hour >= 11 && hour < 22;
+
+      if (isOpen) {
+        setBusinessStatus({
+          isOpen: true,
+          text: "Open ⋅ Closes 10 PM",
+          color: "text-[#188038]",
+        });
+      } else {
+        setBusinessStatus({
+          isOpen: false,
+          text: "Closed ⋅ Opens 11 AM",
+          color: "text-[#d93025]",
+        });
+      }
+    };
+
+    updateStatus();
+    const interval = setInterval(updateStatus, 60000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <main className="bg-[#f1f3f4] min-h-screen pt-20 pb-20 font-sans text-[#202124] overflow-hidden">
@@ -40,8 +94,8 @@ export default function LandingPage() {
                 <span className="text-[#70757a] underline decoration-dotted underline-offset-4 cursor-pointer">430 reviews</span>
               </div>
 
-              <div className="flex items-center gap-2 text-sm text-[#188038] font-medium pt-1">
-                Open <span className="text-[#70757a] font-normal">⋅ Closes 10 PM</span>
+              <div className={`flex items-center gap-2 text-sm font-medium pt-1 ${businessStatus.color}`}>
+                {businessStatus.isOpen ? "Open" : "Closed"} <span className="text-[#70757a] font-normal">⋅ {businessStatus.isOpen ? "Closes 10 PM" : "Opens 11 AM"}</span>
               </div>
             </div>
 
@@ -120,8 +174,10 @@ export default function LandingPage() {
                   <Clock className="w-5 h-5 text-[#F5BB47] shrink-0 mt-0.5" />
                   <div className="flex-1 text-sm">
                     <div className="flex justify-between items-center text-[#202124]">
-                      <span className="font-medium text-[#188038]">Open now</span>
-                      <span className="text-[#70757a]">11 AM - 10 PM</span>
+                      <span className={`font-medium ${businessStatus.isOpen ? "text-[#188038]" : "text-[#d93025]"}`}>
+                        {businessStatus.isOpen ? "Open now" : "Closed"}
+                      </span>
+                      <span className="text-[#70757a]">{businessStatus.isOpen ? "11 AM - 10 PM" : "Opens 11 AM"}</span>
                       <ChevronRight className="w-4 h-4 text-[#70757a]" />
                     </div>
                   </div>
@@ -192,26 +248,26 @@ export default function LandingPage() {
                   <button className="text-[#F5BB47] text-sm font-medium hover:underline">View all</button>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {/* Post Card 1 */}
-                  <div className="border border-gray-200 rounded-xl overflow-hidden group cursor-pointer hover:border-gray-300 transition-colors">
-                    <div className="h-48 bg-gray-100 flex items-center justify-center text-gray-400">
-                      Tattoo Process Image
+                  {postImages.map((src, i) => (
+                    <div key={i} className="border border-gray-200 rounded-xl overflow-hidden group cursor-pointer hover:border-gray-300 transition-colors">
+                      <div className="h-48 relative bg-gray-100 flex items-center justify-center">
+                        <NextImage
+                          src={src}
+                          alt={`Pixel Tattoo Update ${i + 1}`}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                      <div className="p-4">
+                        <p className="text-sm line-clamp-2 text-[#3c4043]">
+                          {i === 0
+                            ? "Check out our latest studio upgrades! We've enhanced our hygiene protocols and added more premium inks."
+                            : "New tattoo equipment has arrived. Fine line detailing just got even better at Pixel Tattoo."}
+                        </p>
+                        <span className="text-xs text-[#70757a] mt-2 block">{i === 0 ? "2 weeks ago" : "1 month ago"}</span>
+                      </div>
                     </div>
-                    <div className="p-4">
-                      <p className="text-sm line-clamp-2 text-[#3c4043]">Your safety is our top priority. Our studio follows strict hygiene...</p>
-                      <span className="text-xs text-[#70757a] mt-2 block">2 weeks ago</span>
-                    </div>
-                  </div>
-                  {/* Post Card 2 */}
-                  <div className="border border-gray-200 rounded-xl overflow-hidden group cursor-pointer hover:border-gray-300 transition-colors">
-                    <div className="h-48 bg-gray-100 flex items-center justify-center text-gray-400">
-                      Ink Selection Image
-                    </div>
-                    <div className="p-4">
-                      <p className="text-sm line-clamp-2 text-[#3c4043]">Looking for a unique tattoo designed specially for you? At custom...</p>
-                      <span className="text-xs text-[#70757a] mt-2 block">1 month ago</span>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -224,9 +280,14 @@ export default function LandingPage() {
                   <button className="text-[#F5BB47] text-sm font-medium hover:underline">View all</button>
                 </div>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
-                  {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+                  {galleryImages.map((src, i) => (
                     <div key={i} className="aspect-square bg-gray-100 rounded-lg overflow-hidden relative cursor-pointer hover:opacity-90 transition-opacity">
-                      <div className="absolute inset-0 flex items-center justify-center text-gray-300 text-xs">Photo {i}</div>
+                      <NextImage
+                        src={src}
+                        alt={`Pixel Tattoo Artwork ${i + 1}`}
+                        fill
+                        className="object-cover"
+                      />
                     </div>
                   ))}
                 </div>
