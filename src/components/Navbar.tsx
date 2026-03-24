@@ -33,8 +33,6 @@ export const Navbar = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const isLanding = pathname === "/landing";
-
     return (
         <>
             <motion.nav
@@ -43,8 +41,8 @@ export const Navbar = () => {
                 transition={{ duration: 0.5 }}
                 className={cn(
                     "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b",
-                    isLanding || isScrolled
-                        ? "bg-white/95 backdrop-blur-md py-3 border-dark/5 shadow-sm"
+                    pathname === "/" || isScrolled
+                        ? "bg-white/95 backdrop-blur-md py-3 border-dark/5 shadow-sm text-dark"
                         : "bg-transparent py-4 border-transparent text-white"
                 )}
             >
