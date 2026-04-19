@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { studioInfo } from "@/lib/data";
+import { LocalBusinessSchema } from "@/components/LocalBusinessSchema";
 
 
 const galleryImages = [
@@ -28,6 +29,21 @@ const galleryImages = [
 const postImages = [
   "/asset/pixel-tattoo-cover-image.webp",
   "/asset/tattoo-machine.webp",
+];
+
+const galleryAltTexts = [
+  "Band tattoo design by Pixel Tattoo Surat",
+  "Color tattoo artwork in City Light Surat",
+  "Professional color tattooing at Pixel Tattoo",
+  "Custom daughter name tattoo Surat",
+  "Fine line floral tattoo Athwa Surat",
+  "Geometric sleeve tattoo design Surat",
+  "Sacred geometry tattoo City Light Town",
+  "Lord Krishna religious tattoo Surat",
+  "Mandala shoulder tattoo Surat",
+  "Mountain landscape tattoo Athwa",
+  "Cute Panda minimalist tattoo Surat",
+  "Peacock feather fine line tattoo",
 ];
 
 export default function Home() {
@@ -73,7 +89,7 @@ export default function Home() {
       <div className="p-5">
         <h2 className="text-xl font-medium mb-3 text-[#202124]">About</h2>
         <p className="text-[#3c4043] text-sm leading-relaxed mb-4">
-          Professional tattoo studio specializing in custom, minimalist, fine-line, black & grey, and cover-up tattoos. High hygiene standards and premium inks.
+          Pixel Tattoo is a professional tattoo studio in City Light Town, Athwa, specializing in custom, minimalist, fine-line, black & grey, and cover-up tattoos. Known as the best tattoo studio in Surat for hygiene and artistry.
         </p>
         <div className="grid grid-cols-2 gap-x-4 gap-y-2 pt-4 border-t border-gray-100">
           {['Tattoo removal', 'Custom design', 'Piercing', 'Cover-up experts'].map((service, idx) => (
@@ -214,7 +230,7 @@ export default function Home() {
             <div key={i} className="aspect-square bg-gray-100 rounded-lg overflow-hidden relative cursor-pointer hover:opacity-90 transition-opacity">
               <NextImage
                 src={src}
-                alt={`Pixel Tattoo Artwork ${i + 1}`}
+                alt={galleryAltTexts[i] || `Pixel Tattoo Artwork ${i + 1} Surat`}
                 fill
                 className="object-cover"
               />
@@ -265,6 +281,7 @@ export default function Home() {
 
   return (
     <main className="bg-[#f1f3f4] min-h-screen pt-20 pb-20 font-sans text-[#202124] overflow-hidden">
+      <LocalBusinessSchema />
       {/* Hero / Top Section */}
       <section className="bg-white border-b border-gray-200 mb-4 px-4 py-8 md:py-12">
         <div className="max-w-[1200px] mx-auto">

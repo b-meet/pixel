@@ -7,6 +7,7 @@ export const studioInfo = {
     phone: process.env.NEXT_PUBLIC_CONTACT_PHONE,
     email: "pixeltattoos.in@gmail.com",
     googleMapsUrl: process.env.NEXT_PUBLIC_GOOGLE_MAPS_URL || "https://maps.app.goo.gl/rKk17qZQ2RwGNGa87",
+    businessProfileId: "9125792527590257894",
     instagram: "https://www.instagram.com/pixeltattoos/",
     description: "Pixel Tattoo is a professional tattoo studio located in City Light, Athwa, Surat, specializing in custom tattoos, minimalist tattoos, fine-line tattoos, black & grey tattoos, and cover-up tattoos. We also offer professional tattoo removal services in Surat, providing safe, hygienic procedures with proper consultation and aftercare.",
     stats: [
