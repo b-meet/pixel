@@ -125,13 +125,12 @@ export const services = [
     }
 ];
 
-export const tattooStyles = [
     {
         id: "realism",
-        slug: "realism",
+        slug: "realism-tattoos",
         name: "Idealism / Realism",
         shortDesc: "Photographic detail",
-        description: "Realism tattoos are designed to look as convincing and lifelike as possible. High-quality realism requires an artist with exceptional technical skill and an eye for detail, mastering shading and perspective to bring the image to life on skin.",
+        description: "Realism tattoos are designed to look as convincing and lifelike as possible. High-quality realism requires an artist with exceptional technical skill and an eye for detail, mastering shading and perspective to bring the image to life on skin. Dheyur and our team specialize in bringing portraits and high-detail images to life in Surat.",
         heroImage: "bg-neutral-800",
         features: [
             { label: "Pain Level", value: "Moderate to High (Long sessions)" },
@@ -147,10 +146,10 @@ export const tattooStyles = [
     },
     {
         id: "geometric",
-        slug: "geometric",
+        slug: "geometric-tattoos",
         name: "Geometric",
         shortDesc: "Sacred symmetry",
-        description: "Geometric tattoos rely on crisp lines and perfect shapes to create intricate patterns. From sacred geometry to modern abstract designs, these tattoos are timeless and visually striking.",
+        description: "Geometric tattoos rely on crisp lines and perfect shapes to create intricate patterns. From sacred geometry to modern abstract designs, these tattoos are timeless and visually striking. Pixel Tattoo is the best studio in City Light for geometric perfection.",
         heroImage: "bg-neutral-800",
         features: [
             { label: "Pain Level", value: "Low to Moderate" },
@@ -162,6 +161,158 @@ export const tattooStyles = [
             title: "Geometric Tattoo Studio Surat | Sacred Geometry",
             description: "Expert geometric and mandala tattoos in Surat. Precision linework and sacred geometry designs at Pixel Tattoos.",
             keywords: ["Geometric Tattoo Surat", "Mandala Tattoo Artist", "Sacred Geometry Tattoo", "Line Art Tattoo"]
+        }
+    },
+    {
+        id: "small-tattoos",
+        slug: "small-tattoos",
+        name: "Small Tattoos",
+        shortDesc: "Powerful micro-art",
+        description: "Tiny tattoos with immense meaning. We specialize in micro-portraits, symbols, and minimalist concepts that fit perfectly in discrete locations. Located in Athwa, we are Surat's experts in clean small-scale ink.",
+        heroImage: "bg-neutral-800",
+        features: [
+            { label: "Pain Level", value: "Low" },
+            { label: "Healing Time", value: "1 Week" },
+            { label: "Best Placement", value: "Wrist, Behind Ear, Finger" },
+        ],
+        gallery: [7, 8, 9],
+        seo: {
+            title: "Best Small Tattoos in Surat | Micro Tattoo Artist",
+            description: "Expert small and micro tattoos at Pixel Tattoo Surat. Clean, precise, and meaningful designs in City Light.",
+            keywords: ["Small Tattoos Surat", "Micro Tattoo Artist", "Minimalist Small Tattoos", "First Tattoo Ideas"]
+        }
+    },
+    {
+        id: "religious-tattoos",
+        slug: "religious-tattoos",
+        name: "Religious Tattoos",
+        shortDesc: "Devotion in ink",
+        description: "Sacred symbols, mantras, and portraits of deities executed with reverence and precision. From Om symbols to intricate statues, we help you carry your faith with pride. Surat's choice for spiritual tattooing.",
+        heroImage: "bg-neutral-800",
+        features: [
+            { label: "Pain Level", value: "Moderate" },
+            { label: "Healing Time", value: "2 Weeks" },
+            { label: "Best Placement", value: "Chest, Forearm, Back" },
+        ],
+        gallery: [1, 2, 3],
+        seo: {
+            title: "Religious Tattoo Artist Surat | OM & Ganesh Tattoos",
+            description: "Soulful religious and spiritual tattoos at Pixel Tattoo Surat. Custom mantras and deity portraits in City Light.",
+            keywords: ["Religious Tattoo Surat", "Spiritual Tattoo India", "OM Tattoo Surat", "God Tattoos"]
+        }
+    },
+    {
+        id: "travel-tattoos",
+        slug: "travel-tattoos",
+        name: "Travel Tattoos",
+        shortDesc: "Capture your journey",
+        description: "Compasses, world maps, coordinates, and skylines. Document your wanderlust with beautiful travel-themed tattoos. We translate your adventures into permanent stamps of your soul in Surat.",
+        heroImage: "bg-neutral-800",
+        features: [
+            { label: "Pain Level", value: "Low to Moderate" },
+            { label: "Healing Time", value: "1-2 Weeks" },
+            { label: "Best Placement", value: "Calf, Inner Arm, Ankle" },
+        ],
+        gallery: [4, 5, 6],
+        seo: {
+            title: "Travel & Wanderlust Tattoos Surat | Pixel Tattoo",
+            description: "Capture your adventures with travel tattoos at Pixel Tattoo Surat. Compass, maps, and skyline designs.",
+            keywords: ["Travel Tattoo Surat", "Wanderlust Tattoo Artist", "Map Tattoos", "Compass Tattoos"]
+        }
+    },
+    {
+        id: "animal-tattoos",
+        slug: "animal-tattoos",
+        name: "Animal Tattoos",
+        shortDesc: "Nature's spirit",
+        description: "From majestic lions and wolves to delicate butterflies and family pets. We capture the essence of the animal kingdom with stunning detail and character. Surreal, geometric, or realistic animal art in Surat.",
+        heroImage: "bg-neutral-800",
+        features: [
+            { label: "Pain Level", value: "Moderate" },
+            { label: "Healing Time", value: "2 Weeks" },
+            { label: "Best Placement", value: "Thigh, Upper Arm, Chest" },
+        ],
+        gallery: [7, 8, 9],
+        seo: {
+            title: "Lion & Animal Tattoo Studio Surat | Pixel Tattoo",
+            description: "Realistic and geometric animal tattoos in Surat. Portraits of lions, wolves, and pets with lifelike detail.",
+            keywords: ["Animal Tattoo Surat", "Lion Tattoo Artist", "Pet Portrait Tattoo", "Wolf Tattoo Surat"]
+        }
+    },
+    {
+        id: "calligraphy-tattoos",
+        slug: "calligraphy-tattoos",
+        name: "Calligraphy Tattoos",
+        shortDesc: "The art of words",
+        description: "Beautiful scripts, bold lettering, and custom typography. Whether it's a name, a date, or a life-changing quote, Dheyur ensures the flow is perfect and the legibility is lasting. Surat's lettering experts.",
+        heroImage: "bg-neutral-800",
+        features: [
+            { label: "Pain Level", value: "Low to Moderate" },
+            { label: "Healing Time", value: "1 Week" },
+            { label: "Best Placement", value: "Collarbone, Wrist, Forearm" },
+        ],
+        gallery: [1, 2, 3],
+        seo: {
+            title: "Name & Script Tattoo Artist Surat | Calligraphy",
+            description: "Custom lettering and name tattoos at Pixel Tattoo Surat. Clean, elegant calligraphy and bold scripts.",
+            keywords: ["Name Tattoo Surat", "Calligraphy Tattoo Artist", "Script Tattoos", "Quotes Tattoos"]
+        }
+    },
+    {
+        id: "couple-tattoos",
+        slug: "couple-tattoos",
+        name: "Couple Tattoos",
+        shortDesc: "Bonded for life",
+        description: "Matching designs, connecting pieces, and symbolic representations of love. We help couples in Surat celebrate their bond with thoughtful, high-quality matching tattoos in a private, comfortable setting.",
+        heroImage: "bg-neutral-800",
+        features: [
+            { label: "Pain Level", value: "Low to Moderate" },
+            { label: "Healing Time", value: "1-2 Weeks" },
+            { label: "Best Placement", value: "Hands, Wrists, Inner Arms" },
+        ],
+        gallery: [4, 5, 6],
+        seo: {
+            title: "Matching Couple Tattoos in Surat | Pixel Tattoo",
+            description: "Celebrate your bond with custom couple tattoos at Pixel Tattoo Surat. Professional design and private sessions.",
+            keywords: ["Couple Tattoo Surat", "Matching Tattoos Surat", "Love Tattoos", "Relationship Tattoos"]
+        }
+    },
+    {
+        id: "dot-work-tattoos",
+        slug: "dot-work-tattoos",
+        name: "Dot Work Tattoos",
+        shortDesc: "Texture via precision",
+        description: "Intricate designs created entirely through stippling and dot techniques. This style offers incredible texture and depth, perfect for geometric patterns and mandalas. Precision dotwork specialists in Surat.",
+        heroImage: "bg-neutral-800",
+        features: [
+            { label: "Pain Level", value: "Low to Moderate" },
+            { label: "Healing Time", value: "1-2 Weeks" },
+            { label: "Best Placement", value: "Back, Leg, Arm" },
+        ],
+        gallery: [7, 8, 9],
+        seo: {
+            title: "Dotwork & Mandala Tattoos Surat | Pixel Tattoo",
+            description: "Expert dotwork and pointillism tattoos at Pixel Tattoo Surat. Intricate mandalas and textured designs.",
+            keywords: ["Dotwork Tattoo Surat", "Mandala Artist Surat", "Stipple Tattoos", "Pointillism Tattoos India"]
+        }
+    },
+    {
+        id: "color-tattoos",
+        slug: "color-tattoos",
+        name: "Color Tattoos",
+        shortDesc: "Vibrant and alive",
+        description: "Bold watercolors, traditional American colors, or high-vibrancy neo-traditional art. We use the highest quality pigments to ensure your colors stay bright and beautiful for years to come. In City Light, Surat.",
+        heroImage: "bg-neutral-800",
+        features: [
+            { label: "Pain Level", value: "Moderate" },
+            { label: "Healing Time", value: "2-3 Weeks" },
+            { label: "Best Placement", value: "Outer Arm, Calf, Back" },
+        ],
+        gallery: [1, 2, 3],
+        seo: {
+            title: "Vibrant Color Tattoo Artist Surat | Pixel Tattoo",
+            description: "Custom watercolor and traditional color tattoos at Pixel Tattoo Surat. Premium pigments for lasting vibrancy.",
+            keywords: ["Color Tattoo Surat", "Watercolor Tattoo Artist", "Traditional Tattoos Surat", "Bright Tattoos"]
         }
     },
 ];
@@ -478,6 +629,7 @@ export const allCategories = [
     { name: "Black & Grey", href: "/tattoo-categories/black-and-grey-tattoos", color: "bg-gray-900" },
     { name: "Cover Ups", href: "/tattoo-categories/cover-up-tattoos", color: "bg-purple-900" },
     { name: "Removal", href: "/tattoo-categories/tattoo-removal", color: "bg-red-950" },
+    { name: "Realism", href: "/tattoo-categories/realism-tattoos", color: "bg-orange-800" },
     { name: "Small Tattoos", href: "/tattoo-categories/small-tattoos", color: "bg-pink-900" },
     { name: "Religious", href: "/tattoo-categories/religious-tattoos", color: "bg-yellow-900" },
     { name: "Geometric", href: "/tattoo-categories/geometric-tattoos", color: "bg-indigo-900" },

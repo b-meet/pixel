@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/tattoo-categories',
         '/faq',
         '/blog',
+        '/styles',
     ].map((route) => ({
         url: `${BASE_URL}${route}`,
         lastModified: new Date(),
