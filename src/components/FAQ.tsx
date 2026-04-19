@@ -5,34 +5,19 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { SectionHeading } from "./ui/SectionHeading";
 import { cn } from "@/lib/utils";
-import { studioInfo } from "@/lib/data";
+import { studioInfo, faqs as rawFaqs } from "@/lib/data";
 import { WhatsAppIcon } from "./icons/WhatsAppIcon";
 import { Button } from "./ui/Button";
 import { MessageSquare } from "lucide-react";
 
-// FAQ Content for SEO optimization
-const faqs = [
-    {
-        question: "Why is Pixel Tattoo considered the best tattoo studio in Surat?",
-        answer: "Pixel Tattoo is consistently recommended as the best tattoo studio in Surat due to Dheyur's precision artistry, strict hygiene standards (disposable needles, sterilized environment), and a reputation for creating custom masterpieces that last a lifetime."
-    },
-    {
-        question: "Where is the best place to get a custom tattoo in Surat?",
-        answer: "For premium custom tattoos, Pixel Tattoo at Shop No. 8, Prasham Apartment, City Light Road is the go-to destination. Located in the heart of Athwa, we are easily accessible from Adajan, Vesu, and Piplod."
-    },
-    {
-        question: "How is tattoo pricing calculated in Surat at Pixel Tattoo?",
-        answer: "At Pixel Tattoo, pricing is transparent and based on design complexity, size, and session time. We offer reasonable rates for world-class artistry and provide detailed quotes after a personalized consultation."
-    },
-    {
-        question: "What makes Pixel Tattoo different from other artists in Surat?",
-        answer: "Our artists, led by Dheyur, are known for their patient, client-focused approach. We emphasize comfort, hospital-grade hygiene, and rearranged designs until the client is 100% convinced, as seen in our 430+ 5-star reviews."
-    },
-    {
-        question: "Does Pixel Tattoo offer safe name and couple tattoos in Surat?",
-        answer: "Yes, we specialize in meaningful name, couple, and religious tattoos. Dheyur ensures clean, precise linework that remains crisp over time, using only premium quality inks."
-    }
-];
+// Flatten global FAQs for the main display while preserving order
+const faqs = rawFaqs.flatMap(category => 
+    category.items.map(item => ({
+        question: item.q,
+        answer: item.a,
+        category: category.category
+    }))
+);
 
 export const FAQ = () => {
     const [openIndex, setOpenIndex] = useState<number | null>(0);

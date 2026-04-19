@@ -577,9 +577,23 @@ export const blogPosts = [
 
 export const faqs = [
     {
+        category: "Surat Tattoo Studio FAQs",
+        items: [
+            { q: "Which is the best tattoo studio in Surat?", a: "Pixel Tattoo is one of the leading tattoo studios in Surat, known for hygienic tattooing, custom designs, professional artists, and premium quality work." },
+            { q: "Where can I get a tattoo in Surat?", a: "You can get a tattoo at Pixel Tattoo, located at Shop No. 8, 1st Floor, Prasham Complex, City Light Road, Opposite Lavanya Market, Athwa, Surat." },
+            { q: "How much does a tattoo cost in Surat?", a: "Tattoo prices in Surat depend on size, design detail, placement, and session time. Pixel Tattoo offers custom pricing after consultation." },
+            { q: "Do you offer custom tattoo designs in Surat?", a: "Yes. Pixel Tattoo specializes in unique custom tattoo designs based on your ideas, style, and body placement." },
+            { q: "Is tattooing safe and hygienic?", a: "Yes. Pixel Tattoo follows strict hygiene standards using disposable needles, sterilized equipment, gloves, and premium quality inks." },
+            { q: "Who is the best tattoo artist in Surat?", a: "Many clients choose Pixel Tattoo in Surat for precision work, custom art, clean lines, and professional tattooing." },
+            { q: "Do you provide tattoo removal in Surat?", a: "Yes. Pixel Tattoo also offers tattoo removal consultations and services in Surat." },
+            { q: "Where is Pixel Tattoo located in Surat?", a: "Pixel Tattoo is located at Shop No. 8, 1st Floor, Prasham Complex, City Light Road, Opposite Lavanya Market, Athwa, Surat 395007." },
+            { q: "Can I book a tattoo appointment online in Surat?", a: "Yes. You can book an appointment with Pixel Tattoo through WhatsApp, Instagram, or phone." },
+            { q: "Which tattoo styles are popular in Surat?", a: "Popular tattoo styles include minimalist tattoos, name tattoos, couple tattoos, portrait tattoos, religious tattoos, geometric tattoos, sleeve tattoos, and cover-up tattoos." }
+        ]
+    },
+    {
         category: "General Tattoo FAQs",
         items: [
-            { q: "Which is the best tattoo studio in Surat?", a: "Pixel Tattoo is a professional tattoo studio in Surat, known for custom designs, hygiene standards, and experienced artists. We focus on personalized tattoos and a comfortable studio experience." },
             { q: "Do you create custom tattoo designs?", a: "Yes. We specialize in custom tattoo design based on your idea, reference, or story. Every tattoo is uniquely designed after a detailed consultation." },
             { q: "Is it safe to get a tattoo?", a: "Yes. At Pixel Tattoo, we follow strict hygiene protocols, use sterilized equipment, disposable needles, and premium inks to ensure safe tattooing." },
             { q: "Does getting a tattoo hurt?", a: "Pain varies depending on placement, size, and individual tolerance. Most clients describe it as manageable discomfort. We guide you properly before starting." },
@@ -592,8 +606,7 @@ export const faqs = [
         items: [
             { q: "Do you do minimalist and fine line tattoos?", a: "Yes. We specialize in minimalist, fine line, and small tattoos, perfect for subtle and elegant designs." },
             { q: "Can you cover an old or faded tattoo?", a: "Yes. We offer cover-up tattoos designed to hide or refresh old, faded, or unwanted tattoos after proper assessment." },
-            { q: "Do you help with tattoo placement and size?", a: "Absolutely. During consultation, we help you choose the best placement, size, and design flow for your body." },
-            { q: "How much does a tattoo cost in Surat?", a: "Tattoo pricing depends on size, design complexity, placement, and time required. We provide clear pricing after consultation." }
+            { q: "Do you help with tattoo placement and size?", a: "Absolutely. During consultation, we help you choose the best placement, size, and design flow for your body." }
         ]
     },
     {
