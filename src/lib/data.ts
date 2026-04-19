@@ -3,7 +3,7 @@ import { CloudLightning, Feather, Image as ImageIcon, Layers, PenTool, RefreshCw
 export const studioInfo = {
     name: "Pixel Tattoo",
     location: "City Light, Surat",
-    fullAddress: "Shop No. 8, 1st Floor, Prasham Complex, City Light Road, Opposite Lavanya Market, City Light Town, Athwa, Surat 395007",
+    fullAddress: "Shop No. 8, 1st Floor, Prasham Apartment, City Light Road, Opposite Lavanya Market, City Light Town, Athwa, Surat 395007",
     phone: process.env.NEXT_PUBLIC_CONTACT_PHONE,
     email: "pixeltattoos.in@gmail.com",
     googleMapsUrl: process.env.NEXT_PUBLIC_GOOGLE_MAPS_URL || "https://maps.app.goo.gl/rKk17qZQ2RwGNGa87",

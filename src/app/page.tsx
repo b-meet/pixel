@@ -109,7 +109,7 @@ export default function Home() {
         <div className="flex items-start gap-4">
           <MapPin className="w-5 h-5 text-[#F5BB47] shrink-0 mt-0.5" />
           <div className="text-sm leading-relaxed">
-            <p className="text-[#202124]">Shop No. 8, 1st Floor, Prasham Complex, City Light Road, Opposite Lavanya Market, City Light Town, Athwa, Surat, Gujarat 395007, India.</p>
+            <p className="text-[#202124]">Shop No. 8, 1st Floor, Prasham Apartment, City Light Road, Opposite Lavanya Market, City Light Town, Athwa, Surat, Gujarat 395007, India.</p>
           </div>
         </div>
 
@@ -170,11 +170,11 @@ export default function Home() {
               <div className="space-y-6">
                 <div className="pb-4 border-b border-gray-100 text-[#3c4043] text-sm">3D-style tattoos</div>
                 <div className="pb-4 border-b border-gray-100 text-[#3c4043] text-sm">Abstract tattoos</div>
-                <Link 
-                  href="/tattoo-categories" 
+                <Link
+                  href="/tattoo-categories"
                   className="text-[#F5BB47] font-medium text-sm flex items-center gap-2 bg-[#f8f9fa] hover:bg-[#f1f3f4] w-full p-3 rounded-lg transition-colors group mt-2"
                 >
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> 
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   <span>More services</span>
                 </Link>
               </div>
@@ -253,10 +253,10 @@ export default function Home() {
             <div key={i} className="border-b border-gray-100 last:border-0 pb-8 last:pb-0">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-10 h-10 rounded-full bg-[#f1f3f4] flex items-center justify-center text-[#70757a] font-medium uppercase text-sm">
-                  {i === 1 ? 'AS' : 'RP'}
+                  {i === 1 ? 'NJ' : 'SP'}
                 </div>
                 <div>
-                  <div className="text-sm font-medium text-[#202124]">{i === 1 ? 'Anjali Sharma' : 'Rahul Patel'}</div>
+                  <div className="text-sm font-medium text-[#202124]">{i === 1 ? 'Neha Jangid' : 'Sandy Patel'}</div>
                   <div className="flex text-[#fbbc04] items-center gap-1 mt-0.5">
                     <div className="flex">
                       {[...Array(5)].map((_, idx) => (
@@ -269,8 +269,8 @@ export default function Home() {
               </div>
               <p className="text-sm text-[#3c4043] leading-relaxed">
                 {i === 1
-                  ? "Absolutely an amazing experience! The artists are highly professional and the hygiene levels are top notch. My custom tattoo came out better than expected."
-                  : "Best tattoo studio in Surat without a doubt. The fine line detailing is incredible. Highly recommended for first timers too!"}
+                  ? "Got my first tattoo from Pixel Tattoo and I’m honestly in love with it. His work is amazing and the detailing is so clean and precise. He’s very focused, patient, and makes you feel comfortable the whole time. I’d definitely recommend him to anyone thinking about getting a tattoo.😊"
+                  : "The experience with Pixel tattoos was awesome. Mr. Dheyur helped me with the design of my tattoo and understood why I wanted what I wanted. He arranged and rearranged the prints several times until I was convinced. Their rates are also quite reasonable and they are super hospitable and warm. Great ambiance, hygiene, and professionalism. If you are looking for somewhere to get a tattoo or piercing, you should go here! Thank you Pixel Tattoo for such a wonderful experience"}
               </p>
             </div>
           ))}
@@ -308,7 +308,7 @@ export default function Home() {
                     ))}
                   </div>
                 </div>
-                <span className="text-[#70757a] underline decoration-dotted underline-offset-4 cursor-pointer">430 reviews</span>
+                <span className="text-[#70757a] underline decoration-dotted underline-offset-4">432 reviews</span>
               </div>
 
               <div className={`flex items-center gap-2 text-sm font-medium pt-1 ${businessStatus.color}`}>

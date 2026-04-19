@@ -28,7 +28,7 @@ exports[`FAQ Component matches snapshot 1`] = `
             <span
               class="text-lg md:text-xl font-heading font-bold uppercase tracking-wide transition-colors duration-300 text-brand"
             >
-              Which is the best tattoo studio in Surat?
+              Why is Pixel Tattoo considered the best tattoo studio in Surat?
             </span>
             <span
               class="transition-transform duration-500 ease-out flex-shrink-0 ml-4 rotate-180 text-brand scale-110"
@@ -67,7 +67,7 @@ exports[`FAQ Component matches snapshot 1`] = `
               <p
                 class="text-base md:text-lg"
               >
-                Pixel Tattoo is one of the leading tattoo studios in Surat, known for hygienic tattooing, custom designs, professional artists, and premium quality work.
+                Pixel Tattoo is consistently recommended as the best tattoo studio in Surat due to Dheyur's precision artistry, strict hygiene standards (disposable needles, sterilized environment), and a reputation for creating custom masterpieces that last a lifetime.
               </p>
             </div>
           </div>
@@ -84,7 +84,7 @@ exports[`FAQ Component matches snapshot 1`] = `
             <span
               class="text-lg md:text-xl font-heading font-bold uppercase tracking-wide transition-colors duration-300 text-dark"
             >
-              Where can I get a tattoo in Surat?
+              Where is the best place to get a custom tattoo in Surat?
             </span>
             <span
               class="transition-transform duration-500 ease-out flex-shrink-0 ml-4 text-dark/40"
@@ -121,7 +121,7 @@ exports[`FAQ Component matches snapshot 1`] = `
             <span
               class="text-lg md:text-xl font-heading font-bold uppercase tracking-wide transition-colors duration-300 text-dark"
             >
-              How much does a tattoo cost in Surat?
+              How is tattoo pricing calculated in Surat at Pixel Tattoo?
             </span>
             <span
               class="transition-transform duration-500 ease-out flex-shrink-0 ml-4 text-dark/40"
@@ -158,7 +158,7 @@ exports[`FAQ Component matches snapshot 1`] = `
             <span
               class="text-lg md:text-xl font-heading font-bold uppercase tracking-wide transition-colors duration-300 text-dark"
             >
-              Do you offer custom tattoo designs in Surat?
+              What makes Pixel Tattoo different from other artists in Surat?
             </span>
             <span
               class="transition-transform duration-500 ease-out flex-shrink-0 ml-4 text-dark/40"
@@ -195,192 +195,7 @@ exports[`FAQ Component matches snapshot 1`] = `
             <span
               class="text-lg md:text-xl font-heading font-bold uppercase tracking-wide transition-colors duration-300 text-dark"
             >
-              Is tattooing safe and hygienic?
-            </span>
-            <span
-              class="transition-transform duration-500 ease-out flex-shrink-0 ml-4 text-dark/40"
-            >
-              <svg
-                aria-hidden="true"
-                class="lucide lucide-chevron-down"
-                fill="none"
-                height="24"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2.5"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="m6 9 6 6 6-6"
-                />
-              </svg>
-            </span>
-          </summary>
-        </details>
-        <details
-          class="group border border-dark/5 rounded-xl overflow-hidden bg-dark-gray transition-all duration-300 hover:border-brand/30"
-        >
-          <summary
-            aria-controls="faq-content-5"
-            aria-expanded="false"
-            class="list-none flex items-center justify-between p-6 cursor-pointer select-none outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-inset transition-all"
-            role="button"
-          >
-            <span
-              class="text-lg md:text-xl font-heading font-bold uppercase tracking-wide transition-colors duration-300 text-dark"
-            >
-              Who is the best tattoo artist in Surat?
-            </span>
-            <span
-              class="transition-transform duration-500 ease-out flex-shrink-0 ml-4 text-dark/40"
-            >
-              <svg
-                aria-hidden="true"
-                class="lucide lucide-chevron-down"
-                fill="none"
-                height="24"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2.5"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="m6 9 6 6 6-6"
-                />
-              </svg>
-            </span>
-          </summary>
-        </details>
-        <details
-          class="group border border-dark/5 rounded-xl overflow-hidden bg-dark-gray transition-all duration-300 hover:border-brand/30"
-        >
-          <summary
-            aria-controls="faq-content-6"
-            aria-expanded="false"
-            class="list-none flex items-center justify-between p-6 cursor-pointer select-none outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-inset transition-all"
-            role="button"
-          >
-            <span
-              class="text-lg md:text-xl font-heading font-bold uppercase tracking-wide transition-colors duration-300 text-dark"
-            >
-              Do you provide tattoo removal in Surat?
-            </span>
-            <span
-              class="transition-transform duration-500 ease-out flex-shrink-0 ml-4 text-dark/40"
-            >
-              <svg
-                aria-hidden="true"
-                class="lucide lucide-chevron-down"
-                fill="none"
-                height="24"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2.5"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="m6 9 6 6 6-6"
-                />
-              </svg>
-            </span>
-          </summary>
-        </details>
-        <details
-          class="group border border-dark/5 rounded-xl overflow-hidden bg-dark-gray transition-all duration-300 hover:border-brand/30"
-        >
-          <summary
-            aria-controls="faq-content-7"
-            aria-expanded="false"
-            class="list-none flex items-center justify-between p-6 cursor-pointer select-none outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-inset transition-all"
-            role="button"
-          >
-            <span
-              class="text-lg md:text-xl font-heading font-bold uppercase tracking-wide transition-colors duration-300 text-dark"
-            >
-              Where is Pixel Tattoo located in Surat?
-            </span>
-            <span
-              class="transition-transform duration-500 ease-out flex-shrink-0 ml-4 text-dark/40"
-            >
-              <svg
-                aria-hidden="true"
-                class="lucide lucide-chevron-down"
-                fill="none"
-                height="24"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2.5"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="m6 9 6 6 6-6"
-                />
-              </svg>
-            </span>
-          </summary>
-        </details>
-        <details
-          class="group border border-dark/5 rounded-xl overflow-hidden bg-dark-gray transition-all duration-300 hover:border-brand/30"
-        >
-          <summary
-            aria-controls="faq-content-8"
-            aria-expanded="false"
-            class="list-none flex items-center justify-between p-6 cursor-pointer select-none outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-inset transition-all"
-            role="button"
-          >
-            <span
-              class="text-lg md:text-xl font-heading font-bold uppercase tracking-wide transition-colors duration-300 text-dark"
-            >
-              Can I book a tattoo appointment online in Surat?
-            </span>
-            <span
-              class="transition-transform duration-500 ease-out flex-shrink-0 ml-4 text-dark/40"
-            >
-              <svg
-                aria-hidden="true"
-                class="lucide lucide-chevron-down"
-                fill="none"
-                height="24"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2.5"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="m6 9 6 6 6-6"
-                />
-              </svg>
-            </span>
-          </summary>
-        </details>
-        <details
-          class="group border border-dark/5 rounded-xl overflow-hidden bg-dark-gray transition-all duration-300 hover:border-brand/30"
-        >
-          <summary
-            aria-controls="faq-content-9"
-            aria-expanded="false"
-            class="list-none flex items-center justify-between p-6 cursor-pointer select-none outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-inset transition-all"
-            role="button"
-          >
-            <span
-              class="text-lg md:text-xl font-heading font-bold uppercase tracking-wide transition-colors duration-300 text-dark"
-            >
-              Which tattoo styles are popular in Surat?
+              Does Pixel Tattoo offer safe name and couple tattoos in Surat?
             </span>
             <span
               class="transition-transform duration-500 ease-out flex-shrink-0 ml-4 text-dark/40"
@@ -499,7 +314,7 @@ exports[`FAQ Component matches snapshot 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which is the best tattoo studio in Surat?","acceptedAnswer":{"@type":"Answer","text":"Pixel Tattoo is one of the leading tattoo studios in Surat, known for hygienic tattooing, custom designs, professional artists, and premium quality work."}},{"@type":"Question","name":"Where can I get a tattoo in Surat?","acceptedAnswer":{"@type":"Answer","text":"You can get a tattoo at Pixel Tattoo, located at Shop No. 8, 1st Floor, Prasham Complex, City Light Road, Opposite Lavanya Market, Athwa, Surat."}},{"@type":"Question","name":"How much does a tattoo cost in Surat?","acceptedAnswer":{"@type":"Answer","text":"Tattoo prices in Surat depend on size, design detail, placement, and session time. Pixel Tattoo offers custom pricing after consultation."}},{"@type":"Question","name":"Do you offer custom tattoo designs in Surat?","acceptedAnswer":{"@type":"Answer","text":"Yes. Pixel Tattoo specializes in unique custom tattoo designs based on your ideas, style, and body placement."}},{"@type":"Question","name":"Is tattooing safe and hygienic?","acceptedAnswer":{"@type":"Answer","text":"Yes. Pixel Tattoo follows strict hygiene standards using disposable needles, sterilized equipment, gloves, and premium quality inks."}},{"@type":"Question","name":"Who is the best tattoo artist in Surat?","acceptedAnswer":{"@type":"Answer","text":"Many clients choose Pixel Tattoo in Surat for precision work, custom art, clean lines, and professional tattooing."}},{"@type":"Question","name":"Do you provide tattoo removal in Surat?","acceptedAnswer":{"@type":"Answer","text":"Yes. Pixel Tattoo also offers tattoo removal consultations and services in Surat."}},{"@type":"Question","name":"Where is Pixel Tattoo located in Surat?","acceptedAnswer":{"@type":"Answer","text":"Pixel Tattoo is located at Shop No. 8, 1st Floor, Prasham Complex, City Light Road, Opposite Lavanya Market, Athwa, Surat 395007."}},{"@type":"Question","name":"Can I book a tattoo appointment online in Surat?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can book an appointment with Pixel Tattoo through WhatsApp, Instagram, or phone."}},{"@type":"Question","name":"Which tattoo styles are popular in Surat?","acceptedAnswer":{"@type":"Answer","text":"Popular tattoo styles include minimalist tattoos, name tattoos, couple tattoos, portrait tattoos, religious tattoos, geometric tattoos, sleeve tattoos, and cover-up tattoos."}}]}
+      {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why is Pixel Tattoo considered the best tattoo studio in Surat?","acceptedAnswer":{"@type":"Answer","text":"Pixel Tattoo is consistently recommended as the best tattoo studio in Surat due to Dheyur's precision artistry, strict hygiene standards (disposable needles, sterilized environment), and a reputation for creating custom masterpieces that last a lifetime."}},{"@type":"Question","name":"Where is the best place to get a custom tattoo in Surat?","acceptedAnswer":{"@type":"Answer","text":"For premium custom tattoos, Pixel Tattoo at Shop No. 8, Prasham Apartment, City Light Road is the go-to destination. Located in the heart of Athwa, we are easily accessible from Adajan, Vesu, and Piplod."}},{"@type":"Question","name":"How is tattoo pricing calculated in Surat at Pixel Tattoo?","acceptedAnswer":{"@type":"Answer","text":"At Pixel Tattoo, pricing is transparent and based on design complexity, size, and session time. We offer reasonable rates for world-class artistry and provide detailed quotes after a personalized consultation."}},{"@type":"Question","name":"What makes Pixel Tattoo different from other artists in Surat?","acceptedAnswer":{"@type":"Answer","text":"Our artists, led by Dheyur, are known for their patient, client-focused approach. We emphasize comfort, hospital-grade hygiene, and rearranged designs until the client is 100% convinced, as seen in our 430+ 5-star reviews."}},{"@type":"Question","name":"Does Pixel Tattoo offer safe name and couple tattoos in Surat?","acceptedAnswer":{"@type":"Answer","text":"Yes, we specialize in meaningful name, couple, and religious tattoos. Dheyur ensures clean, precise linework that remains crisp over time, using only premium quality inks."}}]}
     </script>
   </section>
 </DocumentFragment>

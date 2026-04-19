@@ -13,44 +13,24 @@ import { MessageSquare } from "lucide-react";
 // FAQ Content for SEO optimization
 const faqs = [
     {
-        question: "Which is the best tattoo studio in Surat?",
-        answer: "Pixel Tattoo is one of the leading tattoo studios in Surat, known for hygienic tattooing, custom designs, professional artists, and premium quality work."
+        question: "Why is Pixel Tattoo considered the best tattoo studio in Surat?",
+        answer: "Pixel Tattoo is consistently recommended as the best tattoo studio in Surat due to Dheyur's precision artistry, strict hygiene standards (disposable needles, sterilized environment), and a reputation for creating custom masterpieces that last a lifetime."
     },
     {
-        question: "Where can I get a tattoo in Surat?",
-        answer: "You can get a tattoo at Pixel Tattoo, located at Shop No. 8, 1st Floor, Prasham Complex, City Light Road, Opposite Lavanya Market, Athwa, Surat."
+        question: "Where is the best place to get a custom tattoo in Surat?",
+        answer: "For premium custom tattoos, Pixel Tattoo at Shop No. 8, Prasham Apartment, City Light Road is the go-to destination. Located in the heart of Athwa, we are easily accessible from Adajan, Vesu, and Piplod."
     },
     {
-        question: "How much does a tattoo cost in Surat?",
-        answer: "Tattoo prices in Surat depend on size, design detail, placement, and session time. Pixel Tattoo offers custom pricing after consultation."
+        question: "How is tattoo pricing calculated in Surat at Pixel Tattoo?",
+        answer: "At Pixel Tattoo, pricing is transparent and based on design complexity, size, and session time. We offer reasonable rates for world-class artistry and provide detailed quotes after a personalized consultation."
     },
     {
-        question: "Do you offer custom tattoo designs in Surat?",
-        answer: "Yes. Pixel Tattoo specializes in unique custom tattoo designs based on your ideas, style, and body placement."
+        question: "What makes Pixel Tattoo different from other artists in Surat?",
+        answer: "Our artists, led by Dheyur, are known for their patient, client-focused approach. We emphasize comfort, hospital-grade hygiene, and rearranged designs until the client is 100% convinced, as seen in our 430+ 5-star reviews."
     },
     {
-        question: "Is tattooing safe and hygienic?",
-        answer: "Yes. Pixel Tattoo follows strict hygiene standards using disposable needles, sterilized equipment, gloves, and premium quality inks."
-    },
-    {
-        question: "Who is the best tattoo artist in Surat?",
-        answer: "Many clients choose Pixel Tattoo in Surat for precision work, custom art, clean lines, and professional tattooing."
-    },
-    {
-        question: "Do you provide tattoo removal in Surat?",
-        answer: "Yes. Pixel Tattoo also offers tattoo removal consultations and services in Surat."
-    },
-    {
-        question: "Where is Pixel Tattoo located in Surat?",
-        answer: "Pixel Tattoo is located at Shop No. 8, 1st Floor, Prasham Complex, City Light Road, Opposite Lavanya Market, Athwa, Surat 395007."
-    },
-    {
-        question: "Can I book a tattoo appointment online in Surat?",
-        answer: "Yes. You can book an appointment with Pixel Tattoo through WhatsApp, Instagram, or phone."
-    },
-    {
-        question: "Which tattoo styles are popular in Surat?",
-        answer: "Popular tattoo styles include minimalist tattoos, name tattoos, couple tattoos, portrait tattoos, religious tattoos, geometric tattoos, sleeve tattoos, and cover-up tattoos."
+        question: "Does Pixel Tattoo offer safe name and couple tattoos in Surat?",
+        answer: "Yes, we specialize in meaningful name, couple, and religious tattoos. Dheyur ensures clean, precise linework that remains crisp over time, using only premium quality inks."
     }
 ];
 
@@ -74,15 +54,15 @@ export const FAQ = () => {
     return (
         <section id="faq" className="py-24 bg-white relative z-10 overflow-hidden">
             <div className="container mx-auto px-6 max-w-4xl">
-                <SectionHeading 
-                    title="Best Tattoo Studio in Surat – Frequently Asked Questions" 
-                    subtitle="Expert Advice" 
+                <SectionHeading
+                    title="Best Tattoo Studio in Surat – Frequently Asked Questions"
+                    subtitle="Expert Advice"
                 />
 
                 <div className="space-y-4">
                     {faqs.map((faq, index) => {
                         const isOpen = openIndex === index;
-                        
+
                         return (
                             <details
                                 key={index}
@@ -93,7 +73,7 @@ export const FAQ = () => {
                                     setOpenIndex(isOpen ? null : index);
                                 }}
                             >
-                                <summary 
+                                <summary
                                     className="list-none flex items-center justify-between p-6 cursor-pointer select-none outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-inset transition-all"
                                     role="button"
                                     aria-expanded={isOpen}
@@ -144,7 +124,7 @@ export const FAQ = () => {
                 </div>
 
                 {/* CTA Section */}
-                <motion.div 
+                <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -161,7 +141,7 @@ export const FAQ = () => {
                         <p className="text-dark/70 text-lg mb-8 max-w-xl mx-auto leading-relaxed">
                             Book your tattoo consultation on WhatsApp now and get expert advice for your next piece.
                         </p>
-                        <Button 
+                        <Button
                             href={`https://wa.me/${(studioInfo.phone || "").replace(/[^0-9]/g, "")}`}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -179,7 +159,7 @@ export const FAQ = () => {
                     <div className="absolute bottom-0 left-0 translate-x-1/2 translate-y-1/2 w-32 h-32 bg-brand/10 rounded-full blur-2xl pointer-events-none" aria-hidden="true" />
                 </motion.div>
             </div>
-            
+
             {/* Background Accent */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none -z-10 opacity-[0.03]" aria-hidden="true">
                 <div className="absolute top-0 right-0 w-96 h-96 bg-brand rounded-full blur-[120px]" />

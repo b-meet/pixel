@@ -25,15 +25,15 @@ describe('FAQ Component', () => {
     it('renders FAQ questions', () => {
         render(<FAQ />);
         // Check for at least one question (e.g. the first one)
-        expect(screen.getByText(/Which is the best tattoo studio in Surat/i)).toBeInTheDocument();
-        expect(screen.getByText(/Which tattoo styles are popular in Surat/i)).toBeInTheDocument();
+        expect(screen.getByText(/Why is Pixel Tattoo considered the best tattoo studio in Surat/i)).toBeInTheDocument();
+        expect(screen.getByText(/Does Pixel Tattoo offer safe name and couple tattoos in Surat/i)).toBeInTheDocument();
     });
 
     it('expands an FAQ item when clicked', () => {
         render(<FAQ />);
         
         // Find a question
-        const question = screen.getByText(/Which is the best tattoo studio in Surat/i);
+        const question = screen.getByText(/Why is Pixel Tattoo considered the best tattoo studio in Surat/i);
         const detailsElement = question.closest('details');
         
         // Initially it is open (openIndex default is 0)

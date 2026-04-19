@@ -13,8 +13,8 @@ export const ArtistSection = () => {
                     {/* Text Content */}
                     <div className="order-2 md:order-1">
                         <SectionHeading
-                            title="The Artist"
-                            subtitle="Master of Ink"
+                            title="The Artists"
+                            subtitle="Masters of Ink"
                             center={false}
                             className="mb-8"
                         />
@@ -27,18 +27,18 @@ export const ArtistSection = () => {
                             className="space-y-6 text-dark/70 font-sans leading-relaxed text-lg"
                         >
                             <p>
-                                Behind every masterpiece at Pixel Tattoos is a dedication to perfection.
-                                With over a decade of experience, we specialize in transforming personal stories into
+                                Behind every masterpiece at Pixel Tattoos is a dedication to perfection led by <strong className="text-dark">Dheyur</strong> and our team of professional artists.
+                                With over a decade of combined experience, our artists specialize in transforming personal stories into
                                 permanent art.
                             </p>
                             <p>
                                 Our philosophy is simple: <strong className="text-dark">Every line matters.</strong> Whether
                                 it's intricate geometric patterns, realism, or minimalist fine-line work,
-                                we approach each canvas with reverence and precision.
+                                Dheyur and the team approach each canvas with reverence and precision.
                             </p>
                             <p>
-                                As Surat's premier custom tattoo studio, we don't just ink skin; we curate
-                                experiences that last a lifetime.
+                                As Surat's premier custom tattoo studio, our artists don't just ink skin; we curate
+                                experiences that last a lifetime in the heart of City Light.
                             </p>
 
                             <div className="pt-8">
