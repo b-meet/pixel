@@ -33,6 +33,8 @@ export const Navbar = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    const isValidPage = ["/", "/tattoo-categories", "/about", "/blog", "/faq"].includes(pathname) || pathname.startsWith("/styles/");
+
     return (
         <>
             <motion.nav
@@ -41,14 +43,14 @@ export const Navbar = () => {
                 transition={{ duration: 0.5 }}
                 className={cn(
                     "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b",
-                    pathname === "/" || isScrolled
+                    (isValidPage || isScrolled)
                         ? "bg-white/95 backdrop-blur-md py-3 border-dark/5 shadow-sm text-dark"
                         : "bg-dark/5 backdrop-blur-sm py-4 border-transparent text-white"
                 )}
             >
                 <div className="container mx-auto px-6 flex items-center justify-between">
                     <Link href="/" className="relative z-50 group">
-                        <div className="relative h-10 w-36 md:h-14 md:w-56 transition-all duration-300">
+                        <div className="relative h-10 md:h-14 md:w-56 transition-all duration-300">
                             <NextImage
                                 src="/logo.png"
                                 alt="Pixel Tattoo Logo"
@@ -63,17 +65,17 @@ export const Navbar = () => {
                     <div className="hidden md:flex items-center space-x-8">
                         {navLinks.map((link) => {
                             const isActive = pathname === link.href;
-                            const isLightBg = pathname === "/" || isScrolled;
+                            const isDarkText = isValidPage || isScrolled;
                             return (
                                 <div key={link.name} className="relative group">
                                     <Link
                                         href={link.href}
                                         className={cn(
                                             "flex items-center gap-1 text-sm font-bold uppercase tracking-widest transition-colors relative py-2",
-                                            isActive 
-                                                ? "text-brand" 
-                                                : isLightBg 
-                                                    ? "text-dark/80 hover:text-brand" 
+                                            isActive
+                                                ? "text-brand"
+                                                : isDarkText
+                                                    ? "text-dark/80 hover:text-brand"
                                                     : "text-white/80 hover:text-brand"
                                         )}
                                     >
@@ -101,7 +103,7 @@ export const Navbar = () => {
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         className={cn(
                             "md:hidden transition-colors relative z-50 p-2",
-                            (pathname === "/" || isScrolled) ? "text-dark hover:text-brand" : "text-white hover:text-brand"
+                            (isValidPage || isScrolled) ? "text-dark hover:text-brand" : "text-white hover:text-brand"
                         )}
                     >
                         {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
