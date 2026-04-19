@@ -8,6 +8,9 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: "primary" | "secondary" | "outline" | "ghost";
     size?: "sm" | "md" | "lg";
     children: React.ReactNode;
+    href?: string;
+    target?: string;
+    rel?: string;
 }
 
 export const Button = ({
@@ -15,12 +18,15 @@ export const Button = ({
     variant = "primary",
     size = "md",
     children,
+    href,
+    target,
+    rel,
     ...props
 }: ButtonProps) => {
-    const ref = useRef<HTMLButtonElement>(null);
+    const ref = useRef<any>(null);
     const [position, setPosition] = useState({ x: 0, y: 0 });
 
-    const handleMouseMove = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const handleMouseMove = (e: React.MouseEvent) => {
         const { clientX, clientY } = e;
         const { left, top, width, height } = ref.current?.getBoundingClientRect() || {
             left: 0,
@@ -52,11 +58,16 @@ export const Button = ({
         lg: "px-10 py-4 text-lg",
     };
 
+    const Tag = (href ? motion.a : motion.button) as any;
+
     return (
-        <motion.button
+        <Tag
             ref={ref}
+            href={href}
+            target={target}
+            rel={rel}
             className={cn(
-                "relative inline-flex items-center justify-center font-heading font-bold uppercase tracking-wider transition-colors outline-none cursor-pointer",
+                "relative inline-flex items-center justify-center font-heading font-bold uppercase tracking-wider transition-colors outline-none cursor-pointer rounded-full",
                 variants[variant],
                 sizes[size],
                 className
@@ -68,6 +79,6 @@ export const Button = ({
             {...(props as any)}
         >
             <span className="relative z-10 flex items-center justify-center gap-2">{children}</span>
-        </motion.button>
+        </Tag>
     );
 };

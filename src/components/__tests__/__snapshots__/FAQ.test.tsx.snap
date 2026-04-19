@@ -1,0 +1,506 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`FAQ Component matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="py-24 bg-white relative z-10 overflow-hidden"
+    id="faq"
+  >
+    <div
+      class="container mx-auto px-6 max-w-4xl"
+    >
+      <div>
+        Best Tattoo Studio in Surat – Frequently Asked Questions
+      </div>
+      <div
+        class="space-y-4"
+      >
+        <details
+          class="group border border-dark/5 rounded-xl overflow-hidden bg-dark-gray transition-all duration-300 hover:border-brand/30"
+          open=""
+        >
+          <summary
+            aria-controls="faq-content-0"
+            aria-expanded="true"
+            class="list-none flex items-center justify-between p-6 cursor-pointer select-none outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-inset transition-all"
+            role="button"
+          >
+            <span
+              class="text-lg md:text-xl font-heading font-bold uppercase tracking-wide transition-colors duration-300 text-brand"
+            >
+              Which is the best tattoo studio in Surat?
+            </span>
+            <span
+              class="transition-transform duration-500 ease-out flex-shrink-0 ml-4 rotate-180 text-brand scale-110"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-chevron-down"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m6 9 6 6 6-6"
+                />
+              </svg>
+            </span>
+          </summary>
+          <div
+            animate="[object Object]"
+            aria-labelledby="faq-header-0"
+            exit="[object Object]"
+            id="faq-content-0"
+            initial="[object Object]"
+            role="region"
+            transition="[object Object]"
+          >
+            <div
+              class="p-6 pt-0 text-dark/70 leading-relaxed font-sans border-t border-dark/5 bg-white/50 backdrop-blur-sm"
+            >
+              <p
+                class="text-base md:text-lg"
+              >
+                Pixel Tattoo is one of the leading tattoo studios in Surat, known for hygienic tattooing, custom designs, professional artists, and premium quality work.
+              </p>
+            </div>
+          </div>
+        </details>
+        <details
+          class="group border border-dark/5 rounded-xl overflow-hidden bg-dark-gray transition-all duration-300 hover:border-brand/30"
+        >
+          <summary
+            aria-controls="faq-content-1"
+            aria-expanded="false"
+            class="list-none flex items-center justify-between p-6 cursor-pointer select-none outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-inset transition-all"
+            role="button"
+          >
+            <span
+              class="text-lg md:text-xl font-heading font-bold uppercase tracking-wide transition-colors duration-300 text-dark"
+            >
+              Where can I get a tattoo in Surat?
+            </span>
+            <span
+              class="transition-transform duration-500 ease-out flex-shrink-0 ml-4 text-dark/40"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-chevron-down"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m6 9 6 6 6-6"
+                />
+              </svg>
+            </span>
+          </summary>
+        </details>
+        <details
+          class="group border border-dark/5 rounded-xl overflow-hidden bg-dark-gray transition-all duration-300 hover:border-brand/30"
+        >
+          <summary
+            aria-controls="faq-content-2"
+            aria-expanded="false"
+            class="list-none flex items-center justify-between p-6 cursor-pointer select-none outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-inset transition-all"
+            role="button"
+          >
+            <span
+              class="text-lg md:text-xl font-heading font-bold uppercase tracking-wide transition-colors duration-300 text-dark"
+            >
+              How much does a tattoo cost in Surat?
+            </span>
+            <span
+              class="transition-transform duration-500 ease-out flex-shrink-0 ml-4 text-dark/40"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-chevron-down"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m6 9 6 6 6-6"
+                />
+              </svg>
+            </span>
+          </summary>
+        </details>
+        <details
+          class="group border border-dark/5 rounded-xl overflow-hidden bg-dark-gray transition-all duration-300 hover:border-brand/30"
+        >
+          <summary
+            aria-controls="faq-content-3"
+            aria-expanded="false"
+            class="list-none flex items-center justify-between p-6 cursor-pointer select-none outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-inset transition-all"
+            role="button"
+          >
+            <span
+              class="text-lg md:text-xl font-heading font-bold uppercase tracking-wide transition-colors duration-300 text-dark"
+            >
+              Do you offer custom tattoo designs in Surat?
+            </span>
+            <span
+              class="transition-transform duration-500 ease-out flex-shrink-0 ml-4 text-dark/40"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-chevron-down"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m6 9 6 6 6-6"
+                />
+              </svg>
+            </span>
+          </summary>
+        </details>
+        <details
+          class="group border border-dark/5 rounded-xl overflow-hidden bg-dark-gray transition-all duration-300 hover:border-brand/30"
+        >
+          <summary
+            aria-controls="faq-content-4"
+            aria-expanded="false"
+            class="list-none flex items-center justify-between p-6 cursor-pointer select-none outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-inset transition-all"
+            role="button"
+          >
+            <span
+              class="text-lg md:text-xl font-heading font-bold uppercase tracking-wide transition-colors duration-300 text-dark"
+            >
+              Is tattooing safe and hygienic?
+            </span>
+            <span
+              class="transition-transform duration-500 ease-out flex-shrink-0 ml-4 text-dark/40"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-chevron-down"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m6 9 6 6 6-6"
+                />
+              </svg>
+            </span>
+          </summary>
+        </details>
+        <details
+          class="group border border-dark/5 rounded-xl overflow-hidden bg-dark-gray transition-all duration-300 hover:border-brand/30"
+        >
+          <summary
+            aria-controls="faq-content-5"
+            aria-expanded="false"
+            class="list-none flex items-center justify-between p-6 cursor-pointer select-none outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-inset transition-all"
+            role="button"
+          >
+            <span
+              class="text-lg md:text-xl font-heading font-bold uppercase tracking-wide transition-colors duration-300 text-dark"
+            >
+              Who is the best tattoo artist in Surat?
+            </span>
+            <span
+              class="transition-transform duration-500 ease-out flex-shrink-0 ml-4 text-dark/40"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-chevron-down"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m6 9 6 6 6-6"
+                />
+              </svg>
+            </span>
+          </summary>
+        </details>
+        <details
+          class="group border border-dark/5 rounded-xl overflow-hidden bg-dark-gray transition-all duration-300 hover:border-brand/30"
+        >
+          <summary
+            aria-controls="faq-content-6"
+            aria-expanded="false"
+            class="list-none flex items-center justify-between p-6 cursor-pointer select-none outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-inset transition-all"
+            role="button"
+          >
+            <span
+              class="text-lg md:text-xl font-heading font-bold uppercase tracking-wide transition-colors duration-300 text-dark"
+            >
+              Do you provide tattoo removal in Surat?
+            </span>
+            <span
+              class="transition-transform duration-500 ease-out flex-shrink-0 ml-4 text-dark/40"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-chevron-down"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m6 9 6 6 6-6"
+                />
+              </svg>
+            </span>
+          </summary>
+        </details>
+        <details
+          class="group border border-dark/5 rounded-xl overflow-hidden bg-dark-gray transition-all duration-300 hover:border-brand/30"
+        >
+          <summary
+            aria-controls="faq-content-7"
+            aria-expanded="false"
+            class="list-none flex items-center justify-between p-6 cursor-pointer select-none outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-inset transition-all"
+            role="button"
+          >
+            <span
+              class="text-lg md:text-xl font-heading font-bold uppercase tracking-wide transition-colors duration-300 text-dark"
+            >
+              Where is Pixel Tattoo located in Surat?
+            </span>
+            <span
+              class="transition-transform duration-500 ease-out flex-shrink-0 ml-4 text-dark/40"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-chevron-down"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m6 9 6 6 6-6"
+                />
+              </svg>
+            </span>
+          </summary>
+        </details>
+        <details
+          class="group border border-dark/5 rounded-xl overflow-hidden bg-dark-gray transition-all duration-300 hover:border-brand/30"
+        >
+          <summary
+            aria-controls="faq-content-8"
+            aria-expanded="false"
+            class="list-none flex items-center justify-between p-6 cursor-pointer select-none outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-inset transition-all"
+            role="button"
+          >
+            <span
+              class="text-lg md:text-xl font-heading font-bold uppercase tracking-wide transition-colors duration-300 text-dark"
+            >
+              Can I book a tattoo appointment online in Surat?
+            </span>
+            <span
+              class="transition-transform duration-500 ease-out flex-shrink-0 ml-4 text-dark/40"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-chevron-down"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m6 9 6 6 6-6"
+                />
+              </svg>
+            </span>
+          </summary>
+        </details>
+        <details
+          class="group border border-dark/5 rounded-xl overflow-hidden bg-dark-gray transition-all duration-300 hover:border-brand/30"
+        >
+          <summary
+            aria-controls="faq-content-9"
+            aria-expanded="false"
+            class="list-none flex items-center justify-between p-6 cursor-pointer select-none outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-inset transition-all"
+            role="button"
+          >
+            <span
+              class="text-lg md:text-xl font-heading font-bold uppercase tracking-wide transition-colors duration-300 text-dark"
+            >
+              Which tattoo styles are popular in Surat?
+            </span>
+            <span
+              class="transition-transform duration-500 ease-out flex-shrink-0 ml-4 text-dark/40"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-chevron-down"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m6 9 6 6 6-6"
+                />
+              </svg>
+            </span>
+          </summary>
+        </details>
+      </div>
+      <div
+        class="mt-16 bg-brand/5 border border-brand/20 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden"
+        initial="[object Object]"
+        transition="[object Object]"
+        viewport="[object Object]"
+        whileinview="[object Object]"
+      >
+        <div
+          class="relative z-10"
+        >
+          <div
+            aria-hidden="true"
+            class="w-16 h-16 bg-brand/10 rounded-full flex items-center justify-center mx-auto mb-6 text-brand"
+          >
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-message-square"
+              fill="none"
+              height="32"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="32"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"
+              />
+            </svg>
+          </div>
+          <h3
+            class="text-2xl md:text-3xl font-heading font-bold text-dark mb-4"
+          >
+            Still have questions?
+          </h3>
+          <p
+            class="text-dark/70 text-lg mb-8 max-w-xl mx-auto leading-relaxed"
+          >
+            Book your tattoo consultation on WhatsApp now and get expert advice for your next piece.
+          </p>
+          <a
+            animate="[object Object]"
+            class="relative inline-flex items-center justify-center font-heading font-bold uppercase tracking-wider transition-colors outline-none cursor-pointer rounded-full hover:bg-brand/90 px-10 py-4 text-lg bg-brand text-dark shadow-lg shadow-brand/20 group"
+            href="https://wa.me/7696870470"
+            rel="noopener noreferrer"
+            target="_blank"
+            transition="[object Object]"
+          >
+            <span
+              class="relative z-10 flex items-center justify-center gap-2"
+            >
+              <svg
+                class="group-hover:rotate-12 transition-transform"
+                fill="currentColor"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                />
+              </svg>
+              Message on WhatsApp
+            </span>
+          </a>
+        </div>
+        <div
+          aria-hidden="true"
+          class="absolute top-0 right-0 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-brand/10 rounded-full blur-2xl pointer-events-none"
+        />
+        <div
+          aria-hidden="true"
+          class="absolute bottom-0 left-0 translate-x-1/2 translate-y-1/2 w-32 h-32 bg-brand/10 rounded-full blur-2xl pointer-events-none"
+        />
+      </div>
+    </div>
+    <div
+      aria-hidden="true"
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none -z-10 opacity-[0.03]"
+    >
+      <div
+        class="absolute top-0 right-0 w-96 h-96 bg-brand rounded-full blur-[120px]"
+      />
+      <div
+        class="absolute bottom-0 left-0 w-96 h-96 bg-brand rounded-full blur-[120px]"
+      />
+    </div>
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which is the best tattoo studio in Surat?","acceptedAnswer":{"@type":"Answer","text":"Pixel Tattoo is one of the leading tattoo studios in Surat, known for hygienic tattooing, custom designs, professional artists, and premium quality work."}},{"@type":"Question","name":"Where can I get a tattoo in Surat?","acceptedAnswer":{"@type":"Answer","text":"You can get a tattoo at Pixel Tattoo, located at Shop No. 8, 1st Floor, Prasham Complex, City Light Road, Opposite Lavanya Market, Athwa, Surat."}},{"@type":"Question","name":"How much does a tattoo cost in Surat?","acceptedAnswer":{"@type":"Answer","text":"Tattoo prices in Surat depend on size, design detail, placement, and session time. Pixel Tattoo offers custom pricing after consultation."}},{"@type":"Question","name":"Do you offer custom tattoo designs in Surat?","acceptedAnswer":{"@type":"Answer","text":"Yes. Pixel Tattoo specializes in unique custom tattoo designs based on your ideas, style, and body placement."}},{"@type":"Question","name":"Is tattooing safe and hygienic?","acceptedAnswer":{"@type":"Answer","text":"Yes. Pixel Tattoo follows strict hygiene standards using disposable needles, sterilized equipment, gloves, and premium quality inks."}},{"@type":"Question","name":"Who is the best tattoo artist in Surat?","acceptedAnswer":{"@type":"Answer","text":"Many clients choose Pixel Tattoo in Surat for precision work, custom art, clean lines, and professional tattooing."}},{"@type":"Question","name":"Do you provide tattoo removal in Surat?","acceptedAnswer":{"@type":"Answer","text":"Yes. Pixel Tattoo also offers tattoo removal consultations and services in Surat."}},{"@type":"Question","name":"Where is Pixel Tattoo located in Surat?","acceptedAnswer":{"@type":"Answer","text":"Pixel Tattoo is located at Shop No. 8, 1st Floor, Prasham Complex, City Light Road, Opposite Lavanya Market, Athwa, Surat 395007."}},{"@type":"Question","name":"Can I book a tattoo appointment online in Surat?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can book an appointment with Pixel Tattoo through WhatsApp, Instagram, or phone."}},{"@type":"Question","name":"Which tattoo styles are popular in Surat?","acceptedAnswer":{"@type":"Answer","text":"Popular tattoo styles include minimalist tattoos, name tattoos, couple tattoos, portrait tattoos, religious tattoos, geometric tattoos, sleeve tattoos, and cover-up tattoos."}}]}
+    </script>
+  </section>
+</DocumentFragment>
+`;

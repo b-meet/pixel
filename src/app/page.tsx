@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { studioInfo } from "@/lib/data";
 
+
 const galleryImages = [
   "/asset/Band-tattoo-surat.webp",
   "/asset/Color-tattoo-design.webp",
