@@ -43,7 +43,7 @@ export const Navbar = () => {
                     "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b",
                     pathname === "/" || isScrolled
                         ? "bg-white/95 backdrop-blur-md py-3 border-dark/5 shadow-sm text-dark"
-                        : "bg-transparent py-4 border-transparent text-white"
+                        : "bg-dark/5 backdrop-blur-sm py-4 border-transparent text-white"
                 )}
             >
                 <div className="container mx-auto px-6 flex items-center justify-between">
@@ -63,13 +63,18 @@ export const Navbar = () => {
                     <div className="hidden md:flex items-center space-x-8">
                         {navLinks.map((link) => {
                             const isActive = pathname === link.href;
+                            const isLightBg = pathname === "/" || isScrolled;
                             return (
                                 <div key={link.name} className="relative group">
                                     <Link
                                         href={link.href}
                                         className={cn(
                                             "flex items-center gap-1 text-sm font-bold uppercase tracking-widest transition-colors relative py-2",
-                                            isActive ? "text-brand" : "text-dark/80 hover:text-brand"
+                                            isActive 
+                                                ? "text-brand" 
+                                                : isLightBg 
+                                                    ? "text-dark/80 hover:text-brand" 
+                                                    : "text-white/80 hover:text-brand"
                                         )}
                                     >
                                         {link.name}
@@ -94,7 +99,10 @@ export const Navbar = () => {
                     {/* Mobile Toggle */}
                     <button
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        className="md:hidden text-dark hover:text-brand transition-colors relative z-50 p-2"
+                        className={cn(
+                            "md:hidden transition-colors relative z-50 p-2",
+                            (pathname === "/" || isScrolled) ? "text-dark hover:text-brand" : "text-white hover:text-brand"
+                        )}
                     >
                         {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
                     </button>
