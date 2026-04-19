@@ -124,7 +124,7 @@ export const services = [
         ]
     }
 ];
-
+export const tattooStyles = [
     {
         id: "realism",
         slug: "realism-tattoos",
