@@ -1,8 +1,7 @@
 import { MetadataRoute } from 'next';
-import { blogPosts, services, tattooStyles } from '@/lib/data';
+import { blogPosts, allCategories } from '@/lib/data';
 
 export const dynamic = 'force-static';
-
 
 const BASE_URL = 'https://pixeltattoos.in';
 
@@ -20,8 +19,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: route === '' ? 1 : 0.8,
     }));
 
-    const categoryRoutes = [...services, ...tattooStyles].map((item) => ({
-        url: `${BASE_URL}/tattoo-categories/${item.slug}`,
+    const categoryRoutes = allCategories.map((item) => ({
+        url: `${BASE_URL}${item.href}`,
         lastModified: new Date(),
         changeFrequency: 'weekly' as const,
         priority: 0.9,
