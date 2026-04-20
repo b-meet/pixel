@@ -13,11 +13,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/faq',
         '/blog',
         '/styles',
+        '/privacy-policy',
+        '/terms-and-conditions',
     ].map((route) => ({
         url: `${BASE_URL}${route}`,
         lastModified: new Date(),
         changeFrequency: 'monthly' as const,
-        priority: route === '' ? 1 : 0.8,
+        priority: route === '' ? 1 : (route === '/privacy-policy' || route === '/terms-and-conditions') ? 0.5 : 0.8,
     }));
 
     const categoryRoutes = allCategories.map((item) => ({
