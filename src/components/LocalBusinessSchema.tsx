@@ -1,4 +1,4 @@
-import { studioInfo } from "@/lib/data";
+import { studioInfo, allCategories } from "@/lib/data";
 
 export const LocalBusinessSchema = () => {
     const schema = {
@@ -30,13 +30,7 @@ export const LocalBusinessSchema = () => {
             {
                 "@type": "OpeningHoursSpecification",
                 "dayOfWeek": [
-                    "Monday",
-                    "Tuesday",
-                    "Wednesday",
-                    "Thursday",
-                    "Friday",
-                    "Saturday",
-                    "Sunday"
+                    "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
                 ],
                 "opens": "11:00",
                 "closes": "22:00"
@@ -50,26 +44,14 @@ export const LocalBusinessSchema = () => {
         "review": [
             {
                 "@type": "Review",
-                "author": {
-                    "@type": "Person",
-                    "name": "Neha Jangid"
-                },
-                "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5"
-                },
+                "author": { "@type": "Person", "name": "Neha Jangid" },
+                "reviewRating": { "@type": "Rating", "ratingValue": "5" },
                 "reviewBody": "Got my first tattoo from Pixel Tattoo and I’m honestly in love with it. His work is amazing and the detailing is so clean and precise. He’s very focused, patient, and makes you feel comfortable the whole time. I’d definitely recommend him to anyone thinking about getting a tattoo.😊"
             },
             {
                 "@type": "Review",
-                "author": {
-                    "@type": "Person",
-                    "name": "Sandy Patel"
-                },
-                "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5"
-                },
+                "author": { "@type": "Person", "name": "Sandy Patel" },
+                "reviewRating": { "@type": "Rating", "ratingValue": "5" },
                 "reviewBody": "The experience with Pixel tattoos was awesome. Dheyur helped me with the design of my tattoo and understood why I wanted what I wanted. He arranged and rearranged the prints several times until I was convinced. Their rates are also quite reasonable and they are super hospitable and warm. Great ambiance, hygiene, and professionalism."
             }
         ],
@@ -77,12 +59,20 @@ export const LocalBusinessSchema = () => {
             "@type": "Person",
             "name": "Dheyur",
             "jobTitle": "Lead Artist",
-            "description": "Expert tattoo artist specializing in custom line work, geometric patterns, and realistic designs in Surat."
+            "description": "Expert tattoo artist specializing in custom line work, geometric patterns, and realistic designs in Surat.",
+            "sameAs": [
+                studioInfo.instagram,
+                "https://pixeltattoos.in/about"
+            ]
         },
         "sameAs": [
             studioInfo.instagram,
             "https://www.facebook.com/pixeltattoos.in/",
-            `https://www.google.com/maps?cid=${studioInfo.businessProfileId}`
+            `https://www.google.com/maps?cid=${studioInfo.businessProfileId}`,
+            "https://www.wikidata.org/wiki/Q15309", // Surat
+            "https://www.wikidata.org/wiki/Q11060",  // Tattoo
+            "https://en.wikipedia.org/wiki/Surat",
+            "https://en.wikipedia.org/wiki/Tattoo"
         ],
         "areaServed": [
             { "@type": "City", "name": "Surat" },
@@ -95,42 +85,25 @@ export const LocalBusinessSchema = () => {
             { "@type": "AdministrativeArea", "name": "Katargam" }
         ],
         "knowsAbout": [
+            ...allCategories.map(c => c.name),
             "Custom Tattoo Design",
-            "Minimalist Tattoos",
-            "Geometric Tattooing",
-            "Laser Tattoo Removal",
-            "Fine Line Tattoos",
-            "Cover-up Tattoos"
+            "Hygiene in Tattooing",
+            "Tattoo Aftercare",
+            "Fine Line Artistry",
+            "Traditional Indian Tattoos"
         ],
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
-            "name": "Tattoo Services",
-            "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Custom Tattoo Design",
-                        "description": "Unique custom tattoo designs created from scratch in Surat."
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Laser Tattoo Removal",
-                        "description": "Professional and safe laser tattoo removal services in Surat."
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Minimalist Tattoos",
-                        "description": "Clean, fine-line minimalist tattoos specializing in precision."
-                    }
+            "name": "Custom Tattoo & Removal Services",
+            "itemListElement": allCategories.map((cat, index) => ({
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": cat.name,
+                    "url": `https://pixeltattoos.in${cat.href}`,
+                    "description": `Professional ${cat.name} services at Pixel Tattoo Surat. Custom designs tailored to your vision.`
                 }
-            ]
+            }))
         }
     };
 

@@ -1,4 +1,5 @@
 import { FAQ } from "@/components/FAQ";
+import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,6 +11,10 @@ export const metadata: Metadata = {
 export default function FAQPage() {
     return (
         <main className="bg-white min-h-screen pt-20">
+            <BreadcrumbSchema items={[
+                { name: "Home", item: "/" },
+                { name: "FAQ", item: "/faq" }
+            ]} />
             <FAQ />
         </main>
     );

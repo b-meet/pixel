@@ -6,6 +6,7 @@ import { CheckCircle2, Heart, ShieldCheck, User } from "lucide-react";
 import { Metadata } from "next";
 import { TrustSection } from "@/components/TrustSection";
 import { ArtistSection } from "@/components/ArtistSection";
+import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
     title: "About Pixel Tattoo | Best Tattoo Studio in Surat",
@@ -15,6 +16,10 @@ export const metadata: Metadata = {
 export default function AboutPage() {
     return (
         <main className="bg-white min-h-screen pt-24 pb-20">
+            <BreadcrumbSchema items={[
+                { name: "Home", item: "/" },
+                { name: "About", item: "/about" }
+            ]} />
             {/* Hero Section */}
             <section className="container mx-auto px-6 mb-20">
                 <div className="max-w-4xl mx-auto text-center">

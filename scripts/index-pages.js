@@ -31,43 +31,17 @@ const auth = new google.auth.GoogleAuth({
 const indexing = google.indexing('v3');
 
 // 2. Define URLs to Index
-const urlsToIndex = [
-  "https://pixeltattoos.in/",
-  "https://pixeltattoos.in/about",
-  "https://pixeltattoos.in/tattoo-categories",
-  "https://pixeltattoos.in/faq",
-  "https://pixeltattoos.in/blog",
-  "https://pixeltattoos.in/styles",
-  "https://pixeltattoos.in/tattoo-categories/custom-tattoo",
-  "https://pixeltattoos.in/tattoo-categories/minimalist-tattoos",
-  "https://pixeltattoos.in/tattoo-categories/fine-line-tattoos",
-  "https://pixeltattoos.in/tattoo-categories/black-and-grey-tattoos",
-  "https://pixeltattoos.in/tattoo-categories/cover-up-tattoos",
-  "https://pixeltattoos.in/tattoo-categories/tattoo-removal",
-  "https://pixeltattoos.in/tattoo-categories/realism-tattoos",
-  "https://pixeltattoos.in/tattoo-categories/small-tattoos",
-  "https://pixeltattoos.in/tattoo-categories/religious-tattoos",
-  "https://pixeltattoos.in/tattoo-categories/geometric-tattoos",
-  "https://pixeltattoos.in/tattoo-categories/travel-tattoos",
-  "https://pixeltattoos.in/tattoo-categories/animal-tattoos",
-  "https://pixeltattoos.in/tattoo-categories/calligraphy-tattoos",
-  "https://pixeltattoos.in/tattoo-categories/couple-tattoos",
-  "https://pixeltattoos.in/tattoo-categories/dot-work-tattoos",
-  "https://pixeltattoos.in/tattoo-categories/color-tattoos",
-  "https://pixeltattoos.in/blog/guide-first-tattoo",
-  "https://pixeltattoos.in/blog/custom-design-process",
-  "https://pixeltattoos.in/blog/healing-day-by-day",
-  "https://pixeltattoos.in/blog/aftercare-dos-donts",
-  "https://pixeltattoos.in/blog/minimalist-statement",
-  "https://pixeltattoos.in/blog/fine-line-technique",
-  "https://pixeltattoos.in/blog/cover-up-guide",
-  "https://pixeltattoos.in/blog/placement-guide",
-  "https://pixeltattoos.in/blog/pain-explained",
-  "https://pixeltattoos.in/blog/choose-artist",
-  "https://pixeltattoos.in/blog/tattoo-aftercare-surat-summer",
-  "https://pixeltattoos.in/blog/first-tattoo-ideas",
-  "https://pixeltattoos.in/blog/tattoo-removal-process"
-];
+const URLS_FILE = path.join(__dirname, '../urls.txt');
+
+let urlsToIndex = [];
+
+if (fs.existsSync(URLS_FILE)) {
+  const content = fs.readFileSync(URLS_FILE, 'utf8');
+  urlsToIndex = content.split('\n').map(u => u.trim()).filter(u => u.length > 0);
+} else {
+  console.warn('\x1b[33mWarning: urls.txt not found. Falling back to hardcoded Home URL.\x1b[0m');
+  urlsToIndex = ["https://pixeltattoos.in/"];
+}
 
 // 3. Main Execution Function
 async function indexPages() {

@@ -1,4 +1,5 @@
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 import { blogPosts } from "@/lib/data";
 import Link from "next/link";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
@@ -12,6 +13,10 @@ export const metadata: Metadata = {
 export default function BlogPage() {
     return (
         <main className="bg-white min-h-screen pt-24 pb-20">
+            <BreadcrumbSchema items={[
+                { name: "Home", item: "/" },
+                { name: "Blog", item: "/blog" }
+            ]} />
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
                     <span className="text-brand font-medium tracking-[0.3em] uppercase text-sm mb-4 block">Knowledge Hub</span>

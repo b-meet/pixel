@@ -83,8 +83,8 @@ export const Footer = () => {
                         © {new Date().getFullYear()} {studioInfo.name}. All rights reserved.
                     </p>
                     <div className="flex gap-6 text-sm text-gray-600">
-                        <Link href="/" className="hover:text-brand">Privacy Policy</Link>
-                        <Link href="/" className="hover:text-brand">Terms of Service</Link>
+                        <Link href="/privacy-policy" className="hover:text-brand focus:text-brand transition-colors">Privacy Policy</Link>
+                        <Link href="/terms-and-conditions" className="hover:text-brand focus:text-brand transition-colors">Terms & Conditions</Link>
                     </div>
                 </div>
             </div>

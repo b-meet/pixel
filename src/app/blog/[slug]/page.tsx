@@ -4,6 +4,7 @@ import { blogPosts } from "@/lib/data";
 import { Button } from "@/components/ui/Button";
 import { ArrowLeft, Calendar, Clock, Share2, Tag } from "lucide-react";
 import { Metadata } from "next";
+import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 
 export async function generateStaticParams() {
     return blogPosts.map((post) => ({
@@ -37,6 +38,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
     return (
         <main className="bg-white min-h-screen pt-24 pb-20">
+            <BreadcrumbSchema items={[
+                { name: "Home", item: "/" },
+                { name: "Blog", item: "/blog" },
+                { name: post.title, item: `/blog/${post.slug}` }
+            ]} />
             {/* Breadcrumb */}
             <div className="container mx-auto px-6 mb-8">
                 <Link href="/blog" className="inline-flex items-center text-dark/60 hover:text-brand transition-colors text-sm font-medium uppercase tracking-wider">

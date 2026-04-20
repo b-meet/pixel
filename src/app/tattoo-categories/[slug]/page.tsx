@@ -8,6 +8,7 @@ import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { Metadata } from "next";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 import { MasonryGallery } from "@/components/MasonryGallery";
 
 // Generate params for both services and styles

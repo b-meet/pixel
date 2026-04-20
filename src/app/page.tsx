@@ -9,6 +9,8 @@ import { cn } from "@/lib/utils";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { studioInfo } from "@/lib/data";
 import { LocalBusinessSchema } from "@/components/LocalBusinessSchema";
+import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
+import { HomePageFAQSchema } from "@/components/HomePageFAQSchema";
 
 
 const galleryImages = [
@@ -282,6 +284,8 @@ export default function Home() {
   return (
     <main className="bg-[#f1f3f4] min-h-screen pt-20 pb-20 font-sans text-[#202124] overflow-hidden">
       <LocalBusinessSchema />
+      <BreadcrumbSchema items={[{ name: "Home", item: "/" }]} />
+      <HomePageFAQSchema />
       {/* Hero / Top Section */}
       <section className="bg-white border-b border-gray-200 mb-4 px-4 py-8 md:py-12">
         <div className="max-w-[1200px] mx-auto">

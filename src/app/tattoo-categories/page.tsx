@@ -2,18 +2,23 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Tattoo Gallery | Pixel Tattoo Surat",
-    description: "Explore our portfolio of custom tattoos including realism, minimalist, geometric, and cover-up work done at Pixel Tattoo Surat.",
+    title: "Best Tattoo Styles & Gallery in Surat | Pixel Tattoo",
+    description: "Explore the ultimate collection of tattoo styles in Surat. From 3D realism to minimalist fine lines, see why we are the top-rated studio for your next ink.",
 };
 
 import { GalleryCard } from "@/components/GalleryCard";
 import { ArrowRight, Phone, MapPin } from "lucide-react";
 import { studioInfo, allCategories as categories } from "@/lib/data";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
+import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 
 export default function GalleryPage() {
     return (
         <main className="bg-white min-h-screen pt-24 pb-20">
+            <BreadcrumbSchema items={[
+                { name: "Home", item: "/" },
+                { name: "Tattoo Categories", item: "/tattoo-categories" }
+            ]} />
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
                     <SectionHeading title="Explore Our Art" subtitle="The Collection" />
