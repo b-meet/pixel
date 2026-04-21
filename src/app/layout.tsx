@@ -23,6 +23,11 @@ export const metadata: Metadata = {
     icon: '/favicon.png',
     apple: '/favicon.png',
   },
+  verification: {
+    other: {
+      "p:domain_verify": ["d2cabeabd24d1b8eb99969da585340366"],
+    },
+  },
 };
 
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
